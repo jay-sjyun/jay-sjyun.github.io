@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+html {
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+textarea,
+::placeholder {
+  font-family: "NanumSquare", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.center-wrap {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+body {
+  background: no-repeat url("../images/bg-wave4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/*<----------홈 home---------->*/
+.home-section {
+  height: 100vh;
+}
+.home-section .center-wrap {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.home-section .portfolio-title {
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 5.4rem;
+  font-weight: 900;
+  color: #fff;
+}
+.home-section .logo-img {
+  width: 50%;
+  margin-bottom: 40px;
+}
+.home-section .browser-opt {
+  margin-bottom: 20px;
+  color: #d01110;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.home-section .copyright {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+/*<----------프로젝트 project---------->*/
+/*<----------소개 about---------->*/
+.about-section .center-wrap {
+  overflow: hidden;
+  padding: 0;
+}
+.about-section .img-wrap {
+  overflow: hidden;
+  width: 100%;
+  transform: skew(-30deg);
+}
+.about-section .img-wrap img {
+  transform: skew(30deg);
+}
+.about-section .about-txt {
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
+  padding: 30px 10px;
+}
+.about-section .about-txt dt {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+.about-section .about-txt dd {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.33;
+  word-break: keep-all;
+}
+.about-section .about-txt dd:last-child {
+  margin-bottom: 0;
+}
+.about-section .about-txt .line-break {
+  display: none;
+}
+.about-section .team-name {
+  color: #d01110;
+  font-weight: 900;
+}
+
+/*<----------연락처 contact---------->*/
+.contact-section .center-wrap {
+  overflow: hidden;
+  padding: 0;
+}
+.contact-section .img-wrap {
+  padding-top: 25vh;
+  transform: rotate(30deg);
+}
+.contact-section .img-wrap img:first-child {
+  margin-bottom: 10px;
+  transform: translateX(-20%);
+}
+.contact-section .img-wrap img:last-child {
+  transform: translateX(30%) translateY(-50%);
+}
+.contact-section .contact-txt {
+  margin-top: -50px;
+  padding: 0 10px 8vh;
+}
+.contact-section .contact-txt dt {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+.contact-section .contact-txt dd {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.33;
+  word-break: keep-all;
+}
+.contact-section .contact-txt dd:last-child {
+  margin-bottom: 0;
+}
+.contact-section .highlight {
+  color: #d01110;
+  line-height: 1.33;
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  태블릿 Tablet
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 768px) {
+  /*<----------홈 home---------->*/
+  .home-section .center-wrap {
+    padding: 10px 5vw;
+  }
+  .home-section .portfolio-title {
+    margin-bottom: 100px;
+    font-size: 10rem;
+    line-height: 1.1;
+  }
+  .home-section .logo-img {
+    width: 240px;
+    margin-bottom: 0;
+    margin-right: 120px;
+  }
+  .home-section .intro-wrap {
+    display: flex;
+  }
+  .home-section .intro-txt {
+    position: relative;
+  }
+  .home-section .intro-txt::before {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 1px;
+    height: 80%;
+    background: #fff;
+    transform: translateY(-50%);
+    content: "";
+  }
+  .home-section .browser-opt {
+    font-size: 1.7rem;
+  }
+  .home-section .copyright {
+    font-size: 1.7rem;
+  }
+  /*<----------소개 about---------->*/
+  .about-section .img-wrap {
+    width: 80%;
+    margin-bottom: 0;
+  }
+  .about-section .img-wrap img {
+    max-width: 125%;
+    transform: skew(30deg) scale(105%);
+  }
+  .about-section .about-txt {
+    margin-top: -40vh;
+    padding: 30px 5vw;
+    text-align: right;
+  }
+  .about-section .about-txt dt {
+    font-size: 4rem;
+  }
+  .about-section .about-txt dd {
+    font-size: 1.7rem;
+  }
+  .about-section .about-txt .line-break {
+    display: block;
+  }
+  /*<----------연락처 contact---------->*/
+  .contact-section {
+    margin-top: 120px;
+  }
+  .contact-section .center-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .contact-section .img-wrap {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    margin-top: -5vh;
+    padding-top: 0;
+    transform: rotate(30deg);
+  }
+  .contact-section .img-wrap img {
+    width: 80%;
+  }
+  .contact-section .img-wrap img:first-child {
+    order: 2;
+    margin-bottom: 0;
+    transform: translateX(0%);
+  }
+  .contact-section .img-wrap img:last-child {
+    margin-bottom: 20px;
+    transform: translateX(40%) translateY(0);
+  }
+  .contact-section .contact-txt {
+    margin-top: 40px;
+    padding: 40px 5vw;
+  }
+  .contact-section .contact-txt dt {
+    font-size: 4rem;
+  }
+  .contact-section .contact-txt dd {
+    font-size: 1.7rem;
+  }
+}
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  PC
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 1152px) {
+  /*<----------홈 home---------->*/
+  .home-section .center-wrap {
+    padding: 10px 20px;
+  }
+  /*<----------소개 about---------->*/
+  .about-section .center-wrap {
+    position: relative;
+  }
+  .about-section .img-wrap {
+    width: 50%;
+    margin-left: 40%;
+    margin-bottom: 0;
+    transform: skew(-15deg);
+  }
+  .about-section .img-wrap img {
+    max-width: 100%;
+    transform: skew(15deg) scale(140%);
+  }
+  .about-section .about-txt {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 0;
+    padding: 0 20px;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+  .about-section .about-txt .line-break {
+    display: block;
+  }
+  /*<----------연락처 contact---------->*/
+  .contact-section {
+    margin-top: 120px;
+  }
+  .contact-section .center-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .contact-section .img-wrap {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    margin-top: -5vh;
+    padding-top: 0;
+    transform: rotate(30deg);
+  }
+  .contact-section .img-wrap img {
+    width: 80%;
+  }
+  .contact-section .img-wrap img:first-child {
+    order: 2;
+    transform: translateX(0%);
+  }
+  .contact-section .img-wrap img:last-child {
+    margin-bottom: 40px;
+    transform: translateX(40%) translateY(0);
+  }
+  .contact-section .contact-txt {
+    margin-top: 40px;
+    padding: 40px 5vw;
+  }
+  .contact-section .contact-txt dt {
+    font-size: 4rem;
+  }
+  .contact-section .contact-txt dd {
+    font-size: 1.7rem;
+  }
+}/*# sourceMappingURL=main.css.map */
