@@ -28,7 +28,7 @@ textarea,
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 body {
-  background: no-repeat url("../images/bg-wave4.jpg");
+  background: no-repeat url("../images/bg-wave.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -79,15 +79,19 @@ body {
 .about-section .img-wrap {
   overflow: hidden;
   width: 100%;
+  height: 85vh;
   transform: skew(-30deg);
 }
 .about-section .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transform: skew(30deg);
 }
 .about-section .about-txt {
   position: relative;
   z-index: 3;
-  margin-top: 0;
+  margin: 2vh 0 2vh;
   padding: 30px 10px;
 }
 .about-section .about-txt dt {
@@ -109,7 +113,7 @@ body {
 .about-section .about-txt .line-break {
   display: none;
 }
-.about-section .team-name {
+.about-section .highlight {
   color: #d01110;
   font-weight: 900;
 }
@@ -120,21 +124,23 @@ body {
   padding: 0;
 }
 .contact-section .img-wrap {
-  padding-top: 20vh;
-  transform: rotate(-30deg);
+  overflow: hidden;
+  width: 100%;
+  height: 85vh;
+  transform: skew(30deg);
 }
-.contact-section .img-wrap img:first-child {
-  margin-bottom: 10px;
-  transform: translateX(50%);
-}
-.contact-section .img-wrap img:last-child {
-  transform: translateX(20%);
+.contact-section .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: skew(-30deg);
 }
 .contact-section .contact-txt {
   position: relative;
   z-index: 3;
-  margin-top: -80px;
-  padding: 0 10px 8vh;
+  margin-top: 2vh;
+  padding: 30px 10px 8vh;
+  text-align: right;
 }
 .contact-section .contact-txt dt {
   margin-bottom: 10px;
@@ -155,6 +161,15 @@ body {
 .contact-section .highlight {
   color: #d01110;
   line-height: 1.33;
+}
+
+.overlay-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 /*==============================================
@@ -201,17 +216,16 @@ body {
   }
   /*<----------소개 about---------->*/
   .about-section .img-wrap {
-    width: 80%;
-    margin-bottom: 0;
+    width: 70%;
+    margin-left: 15%;
   }
   .about-section .img-wrap img {
-    max-width: 125%;
-    transform: skew(30deg) scale(105%);
+    width: auto;
+    max-width: initial;
+    transform: skew(30deg) translateX(-15%);
   }
   .about-section .about-txt {
-    margin-top: -40vh;
-    padding: 30px 5vw;
-    text-align: right;
+    padding: 40px 5vw;
   }
   .about-section .about-txt dt {
     font-size: 4rem;
@@ -223,36 +237,17 @@ body {
     display: block;
   }
   /*<----------연락처 contact---------->*/
-  .contact-section {
-    margin-top: 120px;
-  }
-  .contact-section .center-wrap {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0;
-  }
   .contact-section .img-wrap {
-    display: flex;
-    flex-direction: column;
-    order: 2;
-    margin-top: -5vh;
-    padding-top: 0;
-    transform: rotate(30deg);
+    width: 70%;
+    margin-left: 15%;
   }
   .contact-section .img-wrap img {
-    width: 80%;
-  }
-  .contact-section .img-wrap img:first-child {
-    margin-bottom: 20px;
-    transform: translateX(40%);
-  }
-  .contact-section .img-wrap img:last-child {
-    margin-bottom: 20px;
-    transform: translateX(0);
+    width: auto;
+    max-width: initial;
+    transform: skew(-30deg) translateX(-26%);
   }
   .contact-section .contact-txt {
-    margin-top: 40px;
-    padding: 40px 5vw;
+    padding: 40px 5vw 8vh;
   }
   .contact-section .contact-txt dt {
     font-size: 4rem;
@@ -276,14 +271,12 @@ body {
     position: relative;
   }
   .about-section .img-wrap {
-    width: 50%;
+    width: 40%;
     margin-left: 40%;
-    margin-bottom: 0;
-    transform: skew(-15deg);
+    transform: skew(-30deg);
   }
   .about-section .img-wrap img {
-    max-width: 100%;
-    transform: skew(15deg) scale(140%);
+    transform: skew(30deg) translateX(-20%);
   }
   .about-section .about-txt {
     position: absolute;
@@ -291,48 +284,29 @@ body {
     left: 0;
     margin-top: 0;
     padding: 0 20px;
-    text-align: left;
     transform: translateY(-50%);
-  }
-  .about-section .about-txt .line-break {
-    display: block;
   }
   /*<----------연락처 contact---------->*/
   .contact-section {
-    margin-top: 120px;
+    margin: 160px 0 80px;
   }
   .contact-section .center-wrap {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0;
+    position: relative;
   }
   .contact-section .img-wrap {
-    display: flex;
-    flex-direction: column;
-    order: 2;
-    margin-top: -5vh;
-    padding-top: 0;
-    transform: rotate(30deg);
+    width: 40%;
+    margin-left: 20%;
+    transform: skew(30deg);
   }
   .contact-section .img-wrap img {
-    width: 80%;
-  }
-  .contact-section .img-wrap img:first-child {
-    order: 2;
-    transform: translateX(0%);
-  }
-  .contact-section .img-wrap img:last-child {
-    margin-bottom: 40px;
-    transform: translateX(40%) translateY(0);
+    transform: skew(-30deg) translateX(-26%);
   }
   .contact-section .contact-txt {
-    margin-top: 40px;
-    padding: 40px 5vw;
-  }
-  .contact-section .contact-txt dt {
-    font-size: 4rem;
-  }
-  .contact-section .contact-txt dd {
-    font-size: 1.7rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 0;
+    padding: 0 20px;
+    transform: translateY(-50%);
   }
 }/*# sourceMappingURL=main.css.map */

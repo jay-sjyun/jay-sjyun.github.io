@@ -34,7 +34,7 @@ $colorRD1: #d01110;
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 body {
-  background: no-repeat url("../images/bg-wave4.jpg");
+  background: no-repeat url("../images/bg-wave.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -95,10 +95,13 @@ body {
   .img-wrap {
     overflow: hidden;
     width: 100%;
-    // margin-bottom: 20px;
+    height: 85vh;
     transform: skew(-30deg);
 
     img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transform: skew(30deg);
     }
   }
@@ -106,7 +109,7 @@ body {
   .about-txt {
     position: relative;
     z-index: 3;
-    margin-top: 0;
+    margin: 2vh 0 2vh;
     padding: 30px 10px;
 
     dt {
@@ -133,7 +136,7 @@ body {
     }
   }
 
-  .team-name {
+  .highlight {
     color: $colorRD1;
     font-weight: 900;
   }
@@ -147,26 +150,25 @@ body {
   }
 
   .img-wrap {
-    padding-top: 20vh;
-    transform: rotate(-30deg);
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+    transform: skew(30deg);
 
     img {
-      &:first-child {
-        margin-bottom: 10px;
-        transform: translateX(50%);
-      }
-
-      &:last-child {
-        transform: translateX(20%);
-      }
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: skew(-30deg);
     }
   }
 
   .contact-txt {
     position: relative;
     z-index: 3;
-    margin-top: -80px;
-    padding: 0 10px 8vh;
+    margin-top: 2vh;
+    padding: 30px 10px 8vh;
+    text-align: right;
 
     dt {
       margin-bottom: 10px;
@@ -192,6 +194,16 @@ body {
     color: $colorRD1;
     line-height: 1.33;
   }
+}
+
+.overlay-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  // opacity: 40%;
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 /*==============================================
@@ -248,19 +260,18 @@ body {
   /*<----------소개 about---------->*/
   .about-section {
     .img-wrap {
-      width: 80%;
-      margin-bottom: 0;
+      width: 70%;
+      margin-left: 15%;
 
       img {
-        max-width: 125%;
-        transform: skew(30deg) scale(105%);
+        width: auto;
+        max-width: initial;
+        transform: skew(30deg) translateX(-15%);
       }
     }
 
     .about-txt {
-      margin-top: -40vh;
-      padding: 30px 5vw;
-      text-align: right;
+      padding: 40px 5vw;
 
       dt {
         font-size: 4rem;
@@ -278,39 +289,19 @@ body {
 
   /*<----------연락처 contact---------->*/
   .contact-section {
-    margin-top: 120px;
-    .center-wrap {
-      display: flex;
-      flex-direction: column;
-      padding-top: 0;
-    }
-
     .img-wrap {
-      display: flex;
-      flex-direction: column;
-      order: 2;
-      margin-top: -5vh;
-      padding-top: 0;
-      transform: rotate(30deg);
+      width: 70%;
+      margin-left: 15%;
 
       img {
-        width: 80%;
-
-        &:first-child {
-          margin-bottom: 20px;
-          transform: translateX(40%);
-        }
-
-        &:last-child {
-          margin-bottom: 20px;
-          transform: translateX(0);
-        }
+        width: auto;
+        max-width: initial;
+        transform: skew(-30deg) translateX(-26%);
       }
     }
 
     .contact-txt {
-      margin-top: 40px;
-      padding: 40px 5vw;
+      padding: 40px 5vw 8vh;
 
       dt {
         font-size: 4rem;
@@ -341,15 +332,14 @@ body {
     .center-wrap {
       position: relative;
     }
+
     .img-wrap {
-      width: 50%;
+      width: 40%;
       margin-left: 40%;
-      margin-bottom: 0;
-      transform: skew(-15deg);
+      transform: skew(-30deg);
 
       img {
-        max-width: 100%;
-        transform: skew(15deg) scale(140%);
+        transform: skew(30deg) translateX(-20%);
       }
     }
 
@@ -359,58 +349,34 @@ body {
       left: 0;
       margin-top: 0;
       padding: 0 20px;
-      text-align: left;
       transform: translateY(-50%);
-
-      .line-break {
-        display: block;
-      }
     }
   }
 
   /*<----------연락처 contact---------->*/
   .contact-section {
-    margin-top: 120px;
+    margin: 160px 0 80px;
     .center-wrap {
-      display: flex;
-      flex-direction: column;
-      padding-top: 0;
+      position: relative;
     }
 
     .img-wrap {
-      display: flex;
-      flex-direction: column;
-      order: 2;
-      margin-top: -5vh;
-      padding-top: 0;
-      transform: rotate(30deg);
+      width: 40%;
+      margin-left: 20%;
+      transform: skew(30deg);
 
       img {
-        width: 80%;
-
-        &:first-child {
-          order: 2;
-          transform: translateX(0%);
-        }
-
-        &:last-child {
-          margin-bottom: 40px;
-          transform: translateX(40%) translateY(0);
-        }
+        transform: skew(-30deg) translateX(-26%);
       }
     }
 
     .contact-txt {
-      margin-top: 40px;
-      padding: 40px 5vw;
-
-      dt {
-        font-size: 4rem;
-      }
-
-      dd {
-        font-size: 1.7rem;
-      }
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: 0;
+      padding: 0 20px;
+      transform: translateY(-50%);
     }
   }
 }
