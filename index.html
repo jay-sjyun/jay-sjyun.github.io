@@ -21,9 +21,11 @@
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <script defer src="js/jquery-1.12.3.js"></script>
-    <!-- <script defer src="js/index.js"></script> -->
+    <script defer src="js/slick.min.js"></script>
+    <script defer src="js/index.js"></script>
   </head>
   <body>
     <!--  네비게이션-->
@@ -58,7 +60,129 @@
       </div>
       <!--  프로젝트  -->
       <div class="project-section">
-        <div class="center-wrap"></div>
+        <div class="center-wrap">
+          <ul class="project js-slick">
+            <li>
+              <div class="img-wrap">
+                <picture>
+                  <source srcset="images/project-careyou-t.jpg" media="(min-width: 768px)" />
+                  <source srcset="images/project-careyou-p.jpg" media="(min-width: 1152px)" />
+                  <img src="images/project-careyou-m.jpg" alt="캐어유 홈페이지 이미지" />
+                </picture>
+              </div>
+              <div class="project-txt-wrap">
+                <h2 class="project__title">캐어유</h2>
+                <p class="project__category">실무 프로젝트</p>
+                <p class="project__info">반응형 홈페이지 리뉴얼</p>
+                <p class="project__detail">
+                  <!-- 싱글페이지 탭 기능 구현 (PHP) -->
+                  - iframe 활용 영상 재생<br />
+                  - 이미지 슬라이더 구현 (Slick JS 라이브러리)
+                  <!-- 이메일 전송 구현 -->
+                </p>
+                <p class="project__role">
+                  프로젝트 참여도:<br />
+                  퍼블리싱 80% (HTML, CSS)<br />
+                  디자인 30% (Adobe XD)
+                </p>
+                <a href="https://careyou.org/index.php" class="project__link" target="_blank">바로가기</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <picture>
+                  <source srcset="images/project-enbrain-t.jpg" media="(min-width: 768px)" />
+                  <source srcset="images/project-enbrain-p.jpg" media="(min-width: 1152px)" />
+                  <img src="images/project-enbrain-m.jpg" alt="엔브레인 플랫폼 이미지" />
+                </picture>
+              </div>
+              <div class="project-txt-wrap">
+                <h2 class="project__title">엔브레인</h2>
+                <p class="project__category">실무 프로젝트</p>
+                <p class="project__info">
+                  랜딩 페이지 리뉴얼<br />
+                  내부 플랫폼 UI 유지/보수
+                </p>
+                <p class="project__detail">
+                  - 사용자 권한에 따라 UI 구분<br />
+                  - 검사결과 인쇄 페이지 구현<br />
+                  - CSS 템플릿/하드코딩 활용
+                </p>
+                <p class="project__role">
+                  프로젝트 참여도:<br />
+                  퍼블리싱 100% (HTML, CSS)
+                </p>
+                <a href="https://enbrain.kr/" class="project__link" target="_blank">바로가기</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap"><img src="images/project-test-m.jpg" alt="정신건강테스트 앱 이미지" /></div>
+              <div class="project-txt-wrap">
+                <h2 class="project__title">정신건강테스트</h2>
+                <p class="project__category">실무 프로젝트</p>
+                <p class="project__info">모바일 어플리케이션 제작</p>
+                <p class="project__role">
+                  프로젝트 참여도:<br />
+                  퍼블리싱 50% (HTML, CSS)<br />
+                  디자인 100% (Adobe XD)
+                </p>
+                <a href="#" class="project__link" target="_blank">바로가기</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <picture>
+                  <source srcset="images/project-momentum-t.jpg" media="(min-width: 768px)" />
+                  <source srcset="images/project-momentum-p.jpg" media="(min-width: 1152px)" />
+                  <img src="images/project-momentum-m.jpg" alt="Momentum 클론 홈페이지 이미지" />
+                </picture>
+              </div>
+              <div class="project-txt-wrap">
+                <h2 class="project__title">Momentum</h2>
+                <p class="project__category">개인 프로젝트</p>
+                <p class="project__info">클론 홈페이지 제작</p>
+                <p class="project__detail">
+                  - localStorage 활용 사용자 기억<br />
+                  - REST API 활용 to-do list CRUD 구현<br />
+                  - 외부 API 활용 위치/날씨 기능 구현<br />
+                  - 무작위 배경/명언
+                </p>
+                <p class="project__role">
+                  프로젝트 참여도:<br />
+                  구현 100% (HTML, CSS, Vanilla JS)
+                </p>
+                <a href="https://dev-yun0525.github.io/momentum-clone/" class="project__link" target="_blank">바로가기</a>
+                <a href="https://github.com/dev-yun0525/momentum-clone" class="project__link" target="_blank">Github</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-wrap">
+                <picture>
+                  <source srcset="images/project-library-t.jpg" media="(min-width: 768px)" />
+                  <source srcset="images/project-library-p.jpg" media="(min-width: 1152px)" />
+                  <img src="images/project-library-m.jpg" alt="Momentum 클론 홈페이지 이미지" />
+                </picture>
+              </div>
+              <div class="project-txt-wrap">
+                <h2 class="project__title">평촌도서관</h2>
+                <p class="project__category">개인 프로젝트</p>
+                <p class="project__info">랜딩 페이지 리뉴얼</p>
+                <p class="project__detail">
+                  - 헤더/푸터 분리 (PHP include)<br />
+                  - 반응형 아코디언 네비게이션<br />
+                  - 이미지 슬라이더 구현 (Vanilla JS)<br />
+                  - 탭 기능 구현 (data- attribute)
+                </p>
+                <p class="project__role">
+                  프로젝트 참여도:<br />
+                  구현 100% (HTML,PHP, CSS, Vanilla JS)
+                </p>
+                <a href="#" class="project__link" target="_blank">바로가기</a>
+                <a href="https://github.com/dev-yun0525/pyeongchon-library" class="project__link" target="_blank">Github</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <!--  소개  -->
       <div class="about-section">
