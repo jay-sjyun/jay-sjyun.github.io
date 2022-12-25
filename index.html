@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>UNIT Y | 프론트엔드 개발 포트폴리오</title>
-    <!-- 이미지 수정 필요 -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="UNIT Y" />
     <meta property="og:title" content="UNIT Y | 프론트엔드 개발 포트폴리오" />
@@ -23,6 +22,7 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script defer src="js/jquery-1.12.3.js"></script>
     <script defer src="js/slick.min.js"></script>
     <script defer src="js/index.js"></script>
@@ -61,8 +61,11 @@
       <!--  프로젝트  -->
       <div class="project-section">
         <div class="center-wrap">
-          <ul class="project js-slick">
-            <li>
+          <p class="project-paging js-project-paging">
+            <span></span>
+          </p>
+          <div class="project js-slick">
+            <div>
               <div class="img-wrap">
                 <picture>
                   <source srcset="images/project-careyou-t.jpg" media="(min-width: 768px)" />
@@ -73,7 +76,7 @@
               <div class="project-txt-wrap">
                 <h2 class="project__title">캐어유</h2>
                 <p class="project__category">실무 프로젝트</p>
-                <p class="project__info">반응형 홈페이지 리뉴얼</p>
+                <p class="project__info">홈페이지 리뉴얼</p>
                 <p class="project__detail">
                   <!-- 싱글페이지 탭 기능 구현 (PHP) -->
                   - iframe 활용 영상 재생<br />
@@ -87,8 +90,8 @@
                 </p>
                 <a href="https://careyou.org/index.php" class="project__link" target="_blank">바로가기</a>
               </div>
-            </li>
-            <li>
+            </div>
+            <div>
               <div class="img-wrap">
                 <picture>
                   <source srcset="images/project-enbrain-t.jpg" media="(min-width: 768px)" />
@@ -104,7 +107,7 @@
                   내부 플랫폼 UI 유지/보수
                 </p>
                 <p class="project__detail">
-                  - 사용자 권한에 따라 UI 구분<br />
+                  - 사용자 권한에 따른 UI 구분<br />
                   - 검사결과 인쇄 페이지 구현<br />
                   - CSS 템플릿/하드코딩 활용
                 </p>
@@ -114,8 +117,8 @@
                 </p>
                 <a href="https://enbrain.kr/" class="project__link" target="_blank">바로가기</a>
               </div>
-            </li>
-            <li>
+            </div>
+            <div>
               <div class="img-wrap"><img src="images/project-test-m.jpg" alt="정신건강테스트 앱 이미지" /></div>
               <div class="project-txt-wrap">
                 <h2 class="project__title">정신건강테스트</h2>
@@ -126,10 +129,11 @@
                   퍼블리싱 50% (HTML, CSS)<br />
                   디자인 100% (Adobe XD)
                 </p>
-                <a href="#" class="project__link" target="_blank">바로가기</a>
+                <a href="#" class="project__link" target="_blank">Android</a>
+                <a href="#" class="project__link" target="_blank">Apple</a>
               </div>
-            </li>
-            <li>
+            </div>
+            <div>
               <div class="img-wrap">
                 <picture>
                   <source srcset="images/project-momentum-t.jpg" media="(min-width: 768px)" />
@@ -154,8 +158,8 @@
                 <a href="https://dev-yun0525.github.io/momentum-clone/" class="project__link" target="_blank">바로가기</a>
                 <a href="https://github.com/dev-yun0525/momentum-clone" class="project__link" target="_blank">Github</a>
               </div>
-            </li>
-            <li>
+            </div>
+            <div>
               <div class="img-wrap">
                 <picture>
                   <source srcset="images/project-library-t.jpg" media="(min-width: 768px)" />
@@ -180,8 +184,8 @@
                 <a href="#" class="project__link" target="_blank">바로가기</a>
                 <a href="https://github.com/dev-yun0525/pyeongchon-library" class="project__link" target="_blank">Github</a>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
       <!--  소개  -->

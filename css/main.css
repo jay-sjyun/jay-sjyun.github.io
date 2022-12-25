@@ -72,43 +72,60 @@ body {
 
 /*<----------프로젝트 project---------->*/
 .project-section .center-wrap {
-  margin-bottom: 8vh;
+  position: relative;
   padding: 0;
 }
-.project-section .slick-slide {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+.project-section .project-paging {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 50;
+  color: #fff;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.project-section .slick-slider {
   position: relative;
+}
+.project-section .slick-arrow {
+  position: absolute;
+  top: 60vh;
+  color: #fff;
+  transform: translateY(-100%);
+}
+.project-section .slick-arrow .material-symbols-outlined {
+  font-size: 10vw;
+}
+.project-section .slick-prev {
+  left: 10px;
+  z-index: 50;
+}
+.project-section .slick-next {
+  left: 10vw;
+}
+.project-section .slick-slide {
   overflow: hidden;
-  height: 90vh;
-  min-height: 560px;
-  perspective: 100vw;
-  perspective-origin: center;
 }
 .project-section .img-wrap {
-  position: absolute;
-  top: 5%;
-  left: 0;
-  z-index: -1;
-  width: 60%;
-  transform: rotateY(10deg);
+  overflow: hidden;
+  width: 160vw;
+  height: 60vh;
+  margin: 0 auto;
+  transform: skew(45deg) translateX(-16.5%);
+}
+.project-section .img-wrap img {
+  width: 101vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transform: skew(-45deg) translateX(26%);
 }
 .project-section .project-txt-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 65%;
-  height: 62vh;
-  min-height: 450px;
-  padding: 30px 15px 30px 10px;
-  margin-top: 15vh;
-  background: linear-gradient(to bottom, rgba(35, 31, 32, 0.3), rgba(46, 118, 114, 0.7));
+  padding: 30px 10px;
   color: #fff;
   font-size: 1.4rem;
-  word-break: keep-all;
-  backdrop-filter: blur(3px);
-  transform: rotateY(-10deg);
 }
 .project-section .project__title {
   margin-bottom: 10px;

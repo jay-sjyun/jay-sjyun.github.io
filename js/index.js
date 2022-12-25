@@ -1,7 +1,26 @@
 $(document).ready(function () {
+  // Slick init
   $(".js-slick").slick({
     infinite: true,
-    arrows: false,
+  });
+
+  // Slick arrows
+  const $prevSlideBtn = document.querySelector(".slick-prev");
+  $prevSlideBtn.innerHTML = `<span class="material-symbols-outlined">arrow_back_ios</span>`;
+  const $nextSlideBtn = document.querySelector(".slick-next");
+  $nextSlideBtn.innerHTML = `<span class="material-symbols-outlined">arrow_forward_ios</span>`;
+
+  // Slick 슬라이드 카운터
+  const $slickSlider = $(".slick-slider");
+  const $slickSlides = [...document.querySelectorAll(".slick-slide")];
+  const $originalSlides = $slickSlides.filter((elm) => !elm.classList.contains("slick-cloned"));
+  const $sliderPaging = document.querySelector(".js-project-paging");
+  const totalSlidesNum = $originalSlides.length;
+
+  $slickSlider.on("afterChange", () => {
+    let currentSlide = document.querySelector(".slick-current");
+    let currentIdx = $originalSlides.indexOf(currentSlide);
+    $sliderPaging.textContent = `${currentIdx + 1} / ${totalSlidesNum}`;
   });
 });
 
