@@ -17,11 +17,18 @@ $(document).ready(function () {
   const $sliderPaging = document.querySelector(".js-project-paging");
   const totalSlidesNum = $originalSlides.length;
 
+  $sliderPaging.textContent = `1 / ${totalSlidesNum}`;
   $slickSlider.on("afterChange", () => {
-    let currentSlide = document.querySelector(".slick-current");
-    let currentIdx = $originalSlides.indexOf(currentSlide);
+    let $currentSlide = document.querySelector(".slick-current");
+    let currentIdx = $originalSlides.indexOf($currentSlide);
     $sliderPaging.textContent = `${currentIdx + 1} / ${totalSlidesNum}`;
   });
+
+  // copyright 연도
+  const $yearTxt = document.querySelector(".js-copyright__year");
+
+  const dateObj = new Date();
+  $yearTxt.textContent = dateObj.getFullYear();
 });
 
 // $(document).ready(function () {
