@@ -29,24 +29,27 @@
   </head>
   <body>
     <!--  네비게이션-->
-    <!-- <header id="header">
-      <div id="menu_btn">
-        <a href="#" id="menu_open" title="메뉴 열기"><span>UNIT Y</span><img id="hamburger" src="images/nav/hamburger.png" alt="햄버거 메뉴" /></a>
+    <header class="header">
+      <div class="center-wrap">
+        <button class="btn--open-menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
-      <nav id="nav">
-        <a href="#" id="menu_close" title="메뉴 닫기"><img src="images/nav/exit_opa.png" alt="메뉴 닫기 버튼" /></a>
-        <ul>
-          <li class="active"><a href="#home">HOME</a></li>
+      <nav class="nav">
+        <button class="btn--close-menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#home" class="on">HOME</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-      <div id="nav_bg"></div>
-    </header> -->
+    </header>
     <main class="main">
       <!--  홈  -->
-      <div class="home-section">
+      <div id="home" class="home-section">
         <div class="center-wrap">
           <h1 class="portfolio-title">WEB<br />FRONTEND<br />PORTFOLIO</h1>
           <div class="intro-wrap">
@@ -59,7 +62,7 @@
         </div>
       </div>
       <!--  프로젝트  -->
-      <div class="project-section">
+      <div id="projects" class="project-section">
         <div class="center-wrap">
           <div class="project-paging js-project-paging"></div>
           <div class="project js-slick">
@@ -114,9 +117,10 @@
                 <div class="link-wrap"><a href="https://enbrain.kr/" class="project__link" target="_blank">바로가기</a></div>
               </div>
             </div>
-            <div>
+            <div class="project-test">
               <div class="img-wrap">
                 <picture class="project-img">
+                  <source srcset="images/project-test-p.jpg" media="(min-width: 768px)" />
                   <img src="images/project-test-m.jpg" alt="정신건강테스트 앱 이미지" />
                 </picture>
               </div>
@@ -135,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="project-momentum">
               <div class="img-wrap">
                 <picture class="project-img">
                   <source srcset="images/project-momentum-p.jpg" media="(min-width: 768px)" />
@@ -148,7 +152,7 @@
                 <p class="project__info">클론 홈페이지 제작</p>
                 <p class="project__detail">
                   - localStorage 활용 사용자 기억<br />
-                  - REST API/JSON 활용 to-do list CRUD 구현<br />
+                  - REST API 활용 저장/불러오기 구현<br />
                   - 외부 API 활용 위치/날씨 기능 구현<br />
                   - 무작위 배경/명언
                 </p>
@@ -184,7 +188,7 @@
                   구현 100% (HTML, PHP, CSS, Vanilla JS)
                 </p>
                 <div class="link-wrap">
-                  <a href="https://dev-yun0525.github.io/momentum-clone/" class="project__link" target="_blank">바로가기</a>
+                  <a href="https://pyeongchonlib.dothome.co.kr" class="project__link" target="_blank">바로가기</a>
                   <a href="https://github.com/dev-yun0525/pyeongchon-library" class="project__link" target="_blank">Github</a>
                 </div>
               </div>
@@ -193,7 +197,7 @@
         </div>
       </div>
       <!--  소개  -->
-      <div class="about-section">
+      <div id="about" class="about-section">
         <div class="center-wrap">
           <div class="img-wrap">
             <picture>
@@ -221,7 +225,7 @@
         </div>
       </div>
       <!--  연락처  -->
-      <div class="contact-section">
+      <div id="contact" class="contact-section">
         <div class="center-wrap">
           <div class="img-wrap">
             <img src="images/yacht.jpg" alt="연락처 이미지" />
