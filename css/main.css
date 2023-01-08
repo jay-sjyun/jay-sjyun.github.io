@@ -2,6 +2,7 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -32,6 +33,86 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+/*<----------네비게이션 navigation---------->*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+}
+.header .center-wrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.header .btn--open-menu {
+  cursor: pointer;
+}
+.header .btn--open-menu .material-symbols-outlined {
+  color: #fff;
+  font-size: 4rem;
+}
+.header .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: rgba(46, 118, 114, 0.85);
+  backdrop-filter: blur(5px);
+  transform: translateX(100%);
+  transition: transform 0.4s ease, visibility 0.4s ease;
+}
+.header .nav.on {
+  visibility: visible;
+  transform: translateX(0);
+}
+.header .nav.on .btn--close-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.header .nav.on .nav-list {
+  visibility: visible;
+  opacity: 1;
+}
+.header .btn--close-menu {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.header .btn--close-menu .material-symbols-outlined {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 5.4rem;
+}
+.header .nav-list {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.header .nav-list li a {
+  display: block;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 3.2rem;
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+.header .nav-list li a.on {
+  color: #d01110;
+  opacity: 1;
+}
+.header .nav-list li a:hover, .header .nav-list li a:focus {
+  opacity: 1;
 }
 
 /*<----------홈 home---------->*/
@@ -77,13 +158,13 @@ body {
 }
 .project-section .project-paging {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 50;
+  top: 0;
+  right: 15px;
   color: #fff;
-  font-size: 8vw;
+  font-size: 11vh;
   font-weight: 600;
   text-align: center;
+  font-style: italic;
 }
 .project-section .slick-slider {
   position: relative;
@@ -95,14 +176,15 @@ body {
   transform: translateY(-100%);
 }
 .project-section .slick-arrow .material-symbols-outlined {
-  font-size: 10vw;
+  font-size: 9vh;
 }
 .project-section .slick-prev {
   left: 10px;
   z-index: 50;
 }
 .project-section .slick-next {
-  left: 10vw;
+  left: 9vh;
+  color: #d01110;
 }
 .project-section .slick-slide {
   overflow: hidden;
@@ -122,6 +204,9 @@ body {
   object-position: top;
   transform: skew(-45deg) translateX(29.5%);
 }
+.project-section .project-momentum .project-img img {
+  object-position: center;
+}
 .project-section .project-txt-wrap {
   display: flex;
   flex-direction: column;
@@ -138,8 +223,6 @@ body {
 }
 .project-section .project__category {
   margin-bottom: 20px;
-  color: #d01110;
-  font-weight: 600;
 }
 .project-section .project__info {
   margin-bottom: 20px;
@@ -279,6 +362,22 @@ body {
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 @media only screen and (min-width: 768px) {
+  /*<----------네비게이션 navigation---------->*/
+  .header .center-wrap {
+    padding: 20px;
+  }
+  .header .btn--open-menu .material-symbols-outlined {
+    font-size: 6rem;
+  }
+  .header .nav {
+    width: 60%;
+  }
+  .header .btn--close-menu .material-symbols-outlined {
+    font-size: 12rem;
+  }
+  .header .nav-list li a {
+    font-size: 6rem;
+  }
   /*<----------홈 home---------->*/
   .home-section .center-wrap {
     padding: 10px 5vw;
@@ -317,18 +416,16 @@ body {
   }
   /*<----------프로젝트 project---------->*/
   .project-section .project-paging {
-    top: 20px;
     right: 20px;
-    font-size: 5vw;
   }
   .project-section .slick-arrow .material-symbols-outlined {
-    font-size: 8vw;
+    font-size: 12vw;
   }
   .project-section .slick-prev {
     left: 20px;
   }
   .project-section .slick-next {
-    left: calc(8vw + 10px);
+    left: calc(12vw + 10px);
   }
   .project-section .project-img {
     width: 140vw;
@@ -342,38 +439,44 @@ body {
   }
   .project-section .project-txt-wrap {
     flex-wrap: wrap;
-    align-items: flex-start;
-    height: 39rem;
+    height: 35rem;
     padding: 40px 5vw;
     font-size: 1.7rem;
   }
   .project-section .project__title {
+    align-self: flex-end;
     width: 50%;
+    margin-bottom: 20px;
     padding-right: 20px;
     font-size: 4rem;
     text-align: right;
   }
   .project-section .project__category {
-    flex-basis: calc(100% - 4rem - 30px);
     width: 50%;
     padding-right: 20px;
     text-align: right;
   }
   .project-section .project__info {
+    flex-basis: 50%;
+    width: 50%;
+    padding-right: 20px;
+    text-align: right;
+  }
+  .project-section .project__detail {
+    align-self: flex-start;
     width: 50%;
     padding-left: 20px;
     text-align: left;
   }
-  .project-section .project__detail {
-    padding-left: 20px;
-  }
   .project-section .project__role {
+    align-self: flex-start;
+    width: 50%;
     padding-left: 20px;
     text-align: left;
   }
   .project-section .link-wrap {
+    width: 45%;
     padding-left: 20px;
-    width: 40%;
     flex-direction: column;
   }
   .project-section .project__link {
@@ -431,22 +534,37 @@ body {
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 @media only screen and (min-width: 1152px) {
+  /*<----------네비게이션 navigation---------->*/
+  .header .btn--open-menu .material-symbols-outlined {
+    font-size: 6rem;
+  }
+  .header .nav {
+    width: 50%;
+    background: rgba(46, 118, 114, 0.95);
+    backdrop-filter: blur(0);
+  }
+  .header .btn--close-menu .material-symbols-outlined {
+    font-size: 12rem;
+  }
+  .header .nav-list li a {
+    font-size: 6rem;
+  }
   /*<----------홈 home---------->*/
   .home-section .center-wrap {
     padding: 10px 20px;
   }
   /*<----------프로젝트 project---------->*/
   .project-section .project-paging {
-    font-size: 56px;
+    font-size: 160px;
   }
   .project-section .slick-arrow {
     top: 600px;
   }
   .project-section .slick-arrow .material-symbols-outlined {
-    font-size: 80px;
+    font-size: 120px;
   }
   .project-section .slick-next {
-    left: 90px;
+    left: 130px;
   }
   .project-section .project-img {
     width: 1280px;
@@ -465,6 +583,9 @@ body {
     margin: 20px 0 40px;
     padding: 40px 20px;
   }
+  .project-section .link-wrap {
+    width: 40%;
+  }
   .project-section .project__link {
     transition: background-color 0.2s;
   }
@@ -472,6 +593,9 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
   }
   /*<----------소개 about---------->*/
+  .about-section {
+    padding-top: 60px;
+  }
   .about-section .center-wrap {
     position: relative;
   }
