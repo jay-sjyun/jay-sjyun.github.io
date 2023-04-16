@@ -9,13 +9,13 @@
     <meta property="og:site_name" content="UNIT Y" />
     <meta property="og:title" content="UNIT Y | UI/UX 디자인 포트폴리오" />
     <meta property="og:description" content="UI/UX 디자인 포트폴리오 소개" />
-    <meta property="og:image" content="images/meta_opengraph.png" />
+    <meta property="og:image" content="images/meta-opengraph.png" />
     <meta property="og:url" content="https://jay-sjyun.github.io/" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="UNIT Y" />
     <meta property="twitter:title" content="UNIT Y | UI/UX 디자인 포트폴리오" />
     <meta property="twitter:description" content="UI/UX 디자인 포트폴리오 소개" />
-    <meta property="twitter:image" content="img/meta_opengraph.png" />
+    <meta property="twitter:image" content="img/meta-opengraph.png" />
     <meta property="twitter:url" content="https://jay-sjyun.github.io/" />
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <script defer src="js/index.js"></script>
   </head>
-  <body>
+  <body id="start">
     <header class="header">
       <nav class="nav">
-        <a href="index.html" class="nav__menu">HOME</a>
+        <a href="#start" class="nav__menu">HOME</a>
         <ul class="nav__menu-list">
           <li><a href="#about" class="nav__menu">ABOUT</a></li>
           <li><a href="#contact" class="nav__menu">CONTACT</a></li>
@@ -121,7 +121,7 @@
         <h2 class="section-title">GRAPHIC DESIGN</h2>
         <ul class="project__list">
           <li>
-            <a href="#" class="project__item behance-link">
+            <a href="#" class="project__item behance-link" id="about">
               <div class="project__txt-wrap">
                 <h3 class="project__title">Behance</h3>
                 <span class="project__info">바로가기</span>
@@ -134,7 +134,7 @@
         </ul>
       </div>
       <hr class="section-divider" />
-      <div class="section-wrap about" id="about">
+      <div class="section-wrap about">
         <h2 class="section-title">ABOUT</h2>
         <dl class="about__list">
           <dt class="about__category">SKILL SET</dt>
@@ -155,10 +155,7 @@
       <hr class="section-divider" />
       <div class="section-wrap contact" id="contact">
         <h2 class="section-title">CONTACT</h2>
-        <p class="contact__info">
-          TEL: 010 2767 1619<br />
-          E-MAIL: jay.sjyun@gmail.com
-        </p>
+        <p class="contact__info">E-MAIL: jay.sjyun@gmail.com</p>
       </div>
     </main>
     <footer class="footer">
