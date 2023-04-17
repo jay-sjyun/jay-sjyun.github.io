@@ -320,6 +320,37 @@ pyeongchon library redesign plan---------->*/
   }
 }
 
+/*<----------벤틀리 서울 리디자인 기획안 페이지
+bentley seoul redesign plan---------->*/
+.bentley-plan-outer-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #121212;
+
+  .plan-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    margin: 60px auto;
+    padding: 0 24px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: #121212;
+    @include fontBodyM-KR($colorTxtWH1, center);
+  }
+
+  .footer {
+    background-color: #2b2b2b;
+  }
+}
+
 /*==============================================
 |||||||||||||||||||||||||||||||||||||||||||||||||
   태블릿 Tablet
