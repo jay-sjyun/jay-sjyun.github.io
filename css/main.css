@@ -467,6 +467,13 @@ bentley seoul redesign plan---------->*/
   background-color: #2b2b2b;
 }
 
+/*<----------평촌도서관 리디자인 기획안 페이지
+pyeongchon library redesign plan---------->*/
+.rebook-plan-outer-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 /*==============================================
 |||||||||||||||||||||||||||||||||||||||||||||||||
   태블릿 Tablet
