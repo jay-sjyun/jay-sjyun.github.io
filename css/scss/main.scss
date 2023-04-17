@@ -346,6 +346,11 @@ bentley seoul redesign plan---------->*/
     @include fontBodyM-KR($colorTxtWH1, center);
   }
 
+  .section-main {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+
   .footer {
     background-color: #2b2b2b;
   }

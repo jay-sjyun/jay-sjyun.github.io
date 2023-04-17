@@ -459,6 +459,10 @@ bentley seoul redesign plan---------->*/
   color: #fff;
   text-align: center;
 }
+.bentley-plan-outer-wrap .section-main {
+  padding: 60px 0;
+  background-color: #fff;
+}
 .bentley-plan-outer-wrap .footer {
   background-color: #2b2b2b;
 }
