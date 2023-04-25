@@ -295,6 +295,31 @@ body {
   }
 }
 
+/*<----------정신건강테스트 리디자인 기획안 페이지
+mentalhealth app redesign---------->*/
+.mentalhealth-outer-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .project-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    margin: 64px auto;
+    padding: 0 48px;
+    border-radius: 20px;
+    background-color: #4777d9;
+    @include fontBodyM-KR($colorTxtWH1, center);
+  }
+}
+
 /*<----------리북 앱 uiux 디자인 기획안 페이지
 rebook app uiux design---------->*/
 .rebook-outer-wrap {
@@ -319,7 +344,7 @@ careyou website redesign---------->*/
     justify-content: center;
     align-items: center;
     min-height: 40px;
-    margin: 60px auto;
+    margin: 64px auto;
     padding: 0 48px;
     border-radius: 20px;
     background-color: #fbd574;
@@ -344,7 +369,7 @@ pyeongchon library website redesign---------->*/
     justify-content: center;
     align-items: center;
     min-height: 40px;
-    margin: 60px auto;
+    margin: 64px auto;
     padding: 0 48px;
     border-radius: 20px;
     background-color: #3d5bcb;
@@ -370,7 +395,7 @@ bentley seoul website redesign---------->*/
     justify-content: center;
     align-items: center;
     min-height: 40px;
-    margin: 60px auto;
+    margin: 64px auto;
     padding: 0 48px;
     border: 1px solid #fff;
     border-radius: 20px;
@@ -402,4 +427,47 @@ bentley seoul website redesign---------->*/
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 @media only screen and (min-width: 1024px) {
+  /*<----------정신건강테스트 리디자인 기획안 페이지
+mentalhealth app redesign---------->*/
+  .mentalhealth-outer-wrap {
+    .project-link {
+      margin: 96px auto;
+      padding: 0 48px;
+      border-radius: 20px;
+      @include fontBodyL-KR($colorTxtWH1, center);
+    }
+  }
+
+  /*<----------캐어유 웹사이트 디자인 기획안 페이지
+careyou website redesign---------->*/
+  .careyou-outer-wrap {
+    .project-link {
+      margin: 96px auto;
+      padding: 0 48px;
+      border-radius: 20px;
+      @include fontBodyL-KR($colorTxtBK1, center);
+    }
+  }
+
+  /*<----------평촌도서관 웹사이트 리디자인 기획안 페이지
+pyeongchon library website redesign---------->*/
+  .library-outer-wrap {
+    .project-link {
+      margin: 96px auto;
+      padding: 0 48px;
+      border-radius: 20px;
+      @include fontBodyL-KR($colorTxtWH1, center);
+    }
+  }
+
+  /*<----------벤틀리 서울 웹사이트 리디자인 기획안 페이지
+bentley seoul website redesign---------->*/
+  .bentley-outer-wrap {
+    .project-link {
+      margin: 96px auto;
+      padding: 0 48px;
+      border-radius: 20px;
+      @include fontBodyL-KR($colorTxtWH1, center);
+    }
+  }
 }
