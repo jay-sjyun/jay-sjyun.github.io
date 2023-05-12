@@ -26,6 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   min-height: 64px;
+  margin: 0 auto;
   padding: 8px 6px;
 }
 .header .nav__menu {
@@ -200,7 +201,7 @@ body {
   align-items: flex-end;
   border-radius: 16px;
   box-sizing: border-box;
-  padding-left: 31px;
+  padding-left: 33px;
   background-color: #ffe151;
 }
 .web-design .careyou-web .project__txt-wrap {
@@ -228,8 +229,8 @@ body {
   text-align: left;
 }
 .web-design .careyou-web .project__img-wrap {
-  width: 164px;
-  margin-left: 44px;
+  width: 168px;
+  margin-left: 42px;
 }
 .web-design .library-web {
   overflow: hidden;
@@ -238,8 +239,8 @@ body {
   align-items: flex-end;
   border-radius: 16px;
   box-sizing: border-box;
-  padding-right: 39px;
-  padding-left: 10px;
+  padding-right: 32px;
+  padding-left: 8px;
   border: 1px solid #000;
   background-color: #fff;
 }
@@ -270,8 +271,8 @@ body {
   text-align: left;
 }
 .web-design .library-web .project__img-wrap {
-  width: 164px;
-  margin-right: 21px;
+  width: 168px;
+  margin-right: 24px;
 }
 .web-design .bentley-web {
   overflow: hidden;
@@ -280,7 +281,7 @@ body {
   align-items: flex-end;
   border-radius: 16px;
   box-sizing: border-box;
-  padding-left: 31px;
+  padding-left: 33px;
   background-color: #212121;
 }
 .web-design .bentley-web .project__txt-wrap {
@@ -308,8 +309,8 @@ body {
   text-align: left;
 }
 .web-design .bentley-web .project__img-wrap {
-  width: 164px;
-  margin-left: 37px;
+  width: 168px;
+  margin-left: 35px;
 }
 
 /*<----------그래픽 디자인 graphic design---------->*/
@@ -532,15 +533,286 @@ bentley seoul website redesign---------->*/
 
 /*==============================================
 |||||||||||||||||||||||||||||||||||||||||||||||||
-  태블릿 Tablet
+  태블릿 Tablet, Desktop, Laptop
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-/*==============================================
-|||||||||||||||||||||||||||||||||||||||||||||||||
-  PC Desktop / Laptop
-|||||||||||||||||||||||||||||||||||||||||||||||||
-================================================*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 690px) {
+  /*<----------포트폴리오 메인 portfolio main---------->*/
+  /*<----------헤더 header---------->*/
+  .header .nav {
+    max-width: 690px;
+  }
+  .header .nav__menu {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.272;
+    color: #000;
+    text-align: left;
+  }
+  /*<----------메인 공통 main common---------->*/
+  .main {
+    max-width: 690px;
+    margin: 72px auto;
+    padding: 0 24px;
+  }
+  .section-wrap {
+    margin-bottom: 72px;
+  }
+  .section-title {
+    margin-bottom: 32px;
+    font-family: "Roboto", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #000;
+    text-align: center;
+  }
+  .section-divider {
+    margin: 72px auto;
+  }
+  /*<----------인트로 intro---------->*/
+  .intro .logo-area {
+    width: 308px;
+    margin-bottom: 32px;
+  }
+  .intro .intro__txt {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+  }
+  .intro .intro__optimization {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #47484a;
+    text-align: center;
+  }
+  /*<----------프로젝트 공통 project common---------->*/
+  .project__list li + li {
+    margin-top: 16px;
+  }
+  /*<----------UI/UX 디자인 UI/UX design---------->*/
+  .uiux-design .mentalhealth-app {
+    padding-left: 48px;
+  }
+  .uiux-design .mentalhealth-app .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .uiux-design .mentalhealth-app .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #fff;
+    text-align: left;
+  }
+  .uiux-design .mentalhealth-app .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #fff;
+    text-align: left;
+  }
+  .uiux-design .mentalhealth-app .project__img-wrap {
+    width: 172px;
+  }
+  .uiux-design .rebook-app {
+    padding-right: 49px;
+  }
+  .uiux-design .rebook-app .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .uiux-design .rebook-app .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #fff;
+    text-align: left;
+  }
+  .uiux-design .rebook-app .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #fff;
+    text-align: left;
+  }
+  .uiux-design .rebook-app .project__img-wrap {
+    width: 172px;
+  }
+  /*<----------웹 디자인 web design---------->*/
+  .web-design .careyou-web {
+    padding-left: 55px;
+  }
+  .web-design .careyou-web .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .web-design .careyou-web .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #000;
+    text-align: left;
+  }
+  .web-design .careyou-web .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #000;
+    text-align: left;
+  }
+  .web-design .careyou-web .project__img-wrap {
+    width: 252px;
+    margin-left: 44px;
+  }
+  .web-design .library-web {
+    padding-right: 72px;
+    padding-left: 36px;
+  }
+  .web-design .library-web .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .web-design .library-web .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #000;
+    text-align: left;
+  }
+  .web-design .library-web .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #000;
+    text-align: left;
+  }
+  .web-design .library-web .project__img-wrap {
+    width: 252px;
+    margin-right: 40px;
+  }
+  .web-design .bentley-web {
+    padding-left: 58px;
+  }
+  .web-design .bentley-web .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .web-design .bentley-web .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #fff;
+    text-align: left;
+  }
+  .web-design .bentley-web .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #fff;
+    text-align: left;
+  }
+  .web-design .bentley-web .project__img-wrap {
+    width: 252px;
+    margin-left: 37px;
+  }
+  /*<----------그래픽 디자인 graphic design---------->*/
+  .graphic-design .behance-link .project__txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .graphic-design .behance-link .project__title {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: #fff;
+    text-align: left;
+  }
+  .graphic-design .behance-link .project__info {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #fff;
+    text-align: left;
+  }
+  .graphic-design .behance-link .project__img-wrap {
+    width: 164px;
+  }
+  /*<----------소개 about---------->*/
+  .about .about__category {
+    margin-top: 32px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.333;
+    color: #47484a;
+    text-align: center;
+  }
+  .about .about__detail {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+  }
+  /*<----------연락처 contact---------->*/
+  .contact .contact__info {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+  }
+  /*<----------푸터 footer---------->*/
+  .footer {
+    padding: 40px 24px;
+  }
+  .footer .copyright {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #fff;
+    text-align: center;
+  }
   /*<----------정신건강테스트 리디자인 기획안 페이지
   mentalhealth app redesign---------->*/
   .mentalhealth-outer-wrap .project-link {

@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     min-height: 64px;
+    margin: 0 auto;
     padding: 8px 6px;
   }
 
@@ -157,7 +158,7 @@ body {
 .web-design {
   .careyou-web {
     @include projectItem;
-    padding-left: 31px;
+    padding-left: 33px;
     background-color: #ffe151;
 
     .project__txt-wrap {
@@ -174,15 +175,15 @@ body {
     }
 
     .project__img-wrap {
-      width: 164px;
-      margin-left: 44px;
+      width: 168px;
+      margin-left: 42px;
     }
   }
 
   .library-web {
     @include projectItem;
-    padding-right: 39px;
-    padding-left: 10px;
+    padding-right: 32px;
+    padding-left: 8px;
     border: 1px solid #000;
     background-color: #fff;
 
@@ -202,14 +203,14 @@ body {
     }
 
     .project__img-wrap {
-      width: 164px;
-      margin-right: 21px;
+      width: 168px;
+      margin-right: 24px;
     }
   }
 
   .bentley-web {
     @include projectItem;
-    padding-left: 31px;
+    padding-left: 33px;
     background-color: #212121;
 
     .project__txt-wrap {
@@ -226,8 +227,8 @@ body {
     }
 
     .project__img-wrap {
-      width: 164px;
-      margin-left: 37px;
+      width: 168px;
+      margin-left: 35px;
     }
   }
 }
@@ -415,18 +416,222 @@ bentley seoul website redesign---------->*/
 
 /*==============================================
 |||||||||||||||||||||||||||||||||||||||||||||||||
-  태블릿 Tablet
+  태블릿 Tablet, Desktop, Laptop
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-@media only screen and (min-width: 744px) {
-}
+@media only screen and (min-width: 690px) {
+  /*<----------포트폴리오 메인 portfolio main---------->*/
+  /*<----------헤더 header---------->*/
+  .header {
+    .nav {
+      max-width: 690px;
+    }
 
-/*==============================================
-|||||||||||||||||||||||||||||||||||||||||||||||||
-  PC Desktop / Laptop
-|||||||||||||||||||||||||||||||||||||||||||||||||
-================================================*/
-@media only screen and (min-width: 1024px) {
+    .nav__menu {
+      @include fontHeaderL;
+    }
+  }
+
+  /*<----------메인 공통 main common---------->*/
+  .main {
+    max-width: 690px;
+    margin: 72px auto;
+    padding: 0 24px;
+  }
+
+  .section-wrap {
+    margin-bottom: 72px;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+    @include fontHeadlineL($colorTxtBK1, center);
+  }
+
+  .section-divider {
+    margin: 72px auto;
+  }
+
+  /*<----------인트로 intro---------->*/
+  .intro {
+    .logo-area {
+      width: 308px;
+      margin-bottom: 32px;
+    }
+
+    .intro__txt {
+      @include fontBodyL-KR($colorTxtBK1, center);
+    }
+
+    .intro__optimization {
+      @include fontBodyM-KR($colorTxtDGR1, center);
+    }
+  }
+
+  /*<----------프로젝트 공통 project common---------->*/
+  .project__list li + li {
+    margin-top: 16px;
+  }
+
+  /*<----------UI/UX 디자인 UI/UX design---------->*/
+  .uiux-design {
+    .mentalhealth-app {
+      padding-left: 48px;
+
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR($colorTxtWH1);
+      }
+
+      .project__info {
+        @include fontBodyM-KR($colorTxtWH1);
+      }
+
+      .project__img-wrap {
+        width: 172px;
+      }
+    }
+
+    .rebook-app {
+      padding-right: 49px;
+
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR($colorTxtWH1);
+      }
+
+      .project__info {
+        @include fontBodyM-KR($colorTxtWH1);
+      }
+
+      .project__img-wrap {
+        width: 172px;
+      }
+    }
+  }
+
+  /*<----------웹 디자인 web design---------->*/
+  .web-design {
+    .careyou-web {
+      padding-left: 55px;
+
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR;
+      }
+
+      .project__info {
+        @include fontBodyM-KR;
+      }
+
+      .project__img-wrap {
+        width: 252px;
+        margin-left: 44px;
+      }
+    }
+
+    .library-web {
+      padding-right: 72px;
+      padding-left: 36px;
+
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR;
+      }
+
+      .project__info {
+        @include fontBodyM-KR;
+      }
+
+      .project__img-wrap {
+        width: 252px;
+        margin-right: 40px;
+      }
+    }
+
+    .bentley-web {
+      padding-left: 58px;
+
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR($colorTxtWH1);
+      }
+
+      .project__info {
+        @include fontBodyM-KR($colorTxtWH1);
+      }
+
+      .project__img-wrap {
+        width: 252px;
+        margin-left: 37px;
+      }
+    }
+  }
+
+  /*<----------그래픽 디자인 graphic design---------->*/
+  .graphic-design {
+    .behance-link {
+      .project__txt-wrap {
+        @include projectTxtWrap(200px);
+      }
+
+      .project__title {
+        @include fontTitleL-KR($colorTxtWH1);
+      }
+
+      .project__info {
+        @include fontBodyM-KR($colorTxtWH1);
+      }
+
+      .project__img-wrap {
+        width: 164px;
+      }
+    }
+  }
+
+  /*<----------소개 about---------->*/
+  .about {
+    .about__category {
+      margin-top: 32px;
+      @include fontTitleL-EN($colorTxtDGR1, center);
+    }
+
+    .about__detail {
+      @include fontBodyL-EN($colorTxtBK1, center);
+    }
+  }
+
+  /*<----------연락처 contact---------->*/
+  .contact {
+    .contact__info {
+      @include fontBodyL-EN($colorTxtBK1, center);
+    }
+  }
+
+  /*<----------푸터 footer---------->*/
+  .footer {
+    padding: 40px 24px;
+
+    .copyright {
+      @include fontBodyM-EN($colorTxtWH1, center);
+    }
+  }
+
   /*<----------정신건강테스트 리디자인 기획안 페이지
 mentalhealth app redesign---------->*/
   .mentalhealth-outer-wrap {

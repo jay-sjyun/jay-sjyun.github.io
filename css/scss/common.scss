@@ -6,6 +6,15 @@ $colorTxtBK1: #000;
 $colorTxtDGR1: #47484a;
 $colorLineLGR1: #dddddd;
 
+@mixin fontHeaderL($color: $colorTxtBK1, $align: left) {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.272;
+  color: $color;
+  text-align: $align;
+}
+
 @mixin fontHeaderM($color: $colorTxtBK1, $align: left) {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
@@ -15,11 +24,38 @@ $colorLineLGR1: #dddddd;
   text-align: $align;
 }
 
+@mixin fontHeadlineL($color: $colorTxtBK1, $align: left) {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $color;
+  text-align: $align;
+}
+
 @mixin fontHeadlineM($color: $colorTxtBK1, $align: left) {
   font-family: "Roboto", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.285;
+  color: $color;
+  text-align: $align;
+}
+
+@mixin fontTitleL-KR($color: $colorTxtBK1, $align: left) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.333;
+  color: $color;
+  text-align: $align;
+}
+
+@mixin fontTitleL-EN($color: $colorTxtBK1, $align: left) {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.333;
   color: $color;
   text-align: $align;
 }
@@ -44,6 +80,15 @@ $colorLineLGR1: #dddddd;
 
 @mixin fontBodyL-KR($color: $colorTxtBK1, $align: left) {
   font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color;
+  text-align: $align;
+}
+
+@mixin fontBodyL-EN($color: $colorTxtBK1, $align: left) {
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
