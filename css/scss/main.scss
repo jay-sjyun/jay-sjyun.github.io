@@ -296,31 +296,6 @@ body {
   }
 }
 
-/*<----------정신건강테스트 리디자인 기획안 페이지
-mentalhealth app redesign---------->*/
-.mentalhealth-outer-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-
-  .project-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 40px;
-    margin: 64px auto;
-    padding: 0 48px;
-    border-radius: 20px;
-    background-color: #4777d9;
-    @include fontBodyM-KR($colorTxtWH1, center);
-  }
-}
-
 /*<----------리북 앱 uiux 디자인 기획안 페이지
 rebook app uiux design---------->*/
 .rebook-outer-wrap {
@@ -629,17 +604,6 @@ bentley seoul website redesign---------->*/
 
     .copyright {
       @include fontBodyM-EN($colorTxtWH1, center);
-    }
-  }
-
-  /*<----------정신건강테스트 리디자인 기획안 페이지
-mentalhealth app redesign---------->*/
-  .mentalhealth-outer-wrap {
-    .project-link {
-      margin: 96px auto;
-      padding: 0 48px;
-      border-radius: 20px;
-      @include fontBodyL-KR($colorTxtWH1, center);
     }
   }
 

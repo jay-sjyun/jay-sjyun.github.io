@@ -1,0 +1,440 @@
+@import "common.scss";
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+$colorDementia: #4eb6ad;
+$colorDementiaDark: #215f5a;
+$colorDementiaLight: #f8fffe;
+$colorDepression: #80c783;
+$colorDepressionDark: #3e7040;
+$colorDepressionLight: #f8fff8;
+$colorStress: #4777d9;
+$colorStressDark: #2a4672;
+$colorStressLight: #f5f9ff;
+$colorAlert: #f60033;
+$colorCommonGR1: #5d5d5d;
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+
+/*<----------헤더 header---------->*/
+.header {
+  .project-title {
+    position: relative;
+  }
+
+  .hidden-txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+  }
+}
+
+// .mentalhealth-outer-wrap {
+//   max-width: 1024px;
+//   margin: 0 auto;
+
+//   .project-main {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
+
+/*<----------메인 main---------->*/
+
+/*<----------공통 common---------->*/
+.project-link-wrap {
+  display: flex;
+}
+
+.project-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  margin: 64px auto;
+  padding: 0 48px;
+  border-radius: 20px;
+  background-color: #4777d9;
+  @include fontBodyM-KR($colorTxtWH1, center);
+}
+
+.section {
+  margin-bottom: 64px;
+}
+
+.section__title {
+  margin: 0 16px 48px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid $colorTxtBK1;
+  @include fontHeadlineM;
+}
+
+/*<----------소개 overview---------->*/
+.overview {
+  .content {
+    padding: 0 16px;
+    dt {
+      margin-bottom: 16px;
+      @include fontTitleM-KR($color: $colorTxtDGR1);
+    }
+
+    dd {
+      @include fontBodyM-KR($color: $colorTxtDGR2);
+      word-break: keep-all;
+
+      & + dt {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+/*<----------페르소나 persona---------->*/
+.persona {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .img-wrap {
+    width: 132px;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 140px);
+    padding: 16px;
+    background-color: #f9f9f9;
+  }
+
+  .content__title {
+    margin-bottom: 16px;
+    @include fontTitleM-KR;
+  }
+
+  ul li {
+    margin-left: 24px;
+    @include fontBodyM-KR($color: $colorTxtDGR2);
+    list-style-type: disc;
+    word-break: keep-all;
+
+    & + li {
+      margin-top: 10px;
+    }
+  }
+
+  .goals {
+    width: 100%;
+    margin: 8px 0;
+    padding: 32px 16px;
+    background-color: $colorStressLight;
+  }
+
+  .complaint {
+    width: 100%;
+    padding: 32px 16px;
+    background-color: $colorStressDark;
+
+    .content__title,
+    ul li {
+      color: $colorTxtWH1;
+    }
+  }
+}
+
+/*<----------문제점 problems---------->*/
+.problems {
+  .img-wrap {
+    margin-bottom: 48px;
+  }
+
+  .txt-wrap {
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+
+  .problems__title {
+    margin-bottom: 16px;
+    @include fontTitleM-KR($color: $colorTxtDGR1);
+  }
+
+  .problems__details li {
+    margin-left: 24px;
+    @include fontBodyM-KR($color: $colorTxtDGR2);
+    list-style-type: disc;
+    word-break: keep-all;
+
+    & + li {
+      margin-top: 10px;
+    }
+  }
+
+  .test-start-end {
+    margin-bottom: 48px;
+  }
+}
+
+/*<----------문제 해결 problem-solving---------->*/
+.problem-solving {
+  .txt-wrap {
+    margin-bottom: 48px;
+    padding: 0 16px;
+  }
+
+  .problem-solving__title {
+    margin-bottom: 16px;
+    @include fontTitleM-EN($color: $colorTxtDGR1);
+  }
+
+  .problem-solving__details li {
+    margin-left: 24px;
+    @include fontBodyM-KR($color: $colorTxtDGR2);
+    list-style-type: disc;
+    word-break: keep-all;
+
+    & + li {
+      margin-top: 10px;
+    }
+  }
+
+  .img-wrap.wireframe {
+    margin-bottom: 48px;
+  }
+
+  .color-theme {
+    width: 328px;
+    margin: 0 auto 48px;
+    padding: 16px 0;
+
+    .color-theme__list li {
+      & + li {
+        margin-top: 32px;
+      }
+    }
+
+    .color-theme__title {
+      margin-bottom: 16px;
+      @include fontTitleM-KR($color: $colorTxtDGR1);
+    }
+
+    .color-theme__palette {
+      display: flex;
+      justify-content: space-between;
+
+      &.common {
+        justify-content: flex-start;
+
+        > div {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    .color-sample {
+      width: 99px;
+      height: 99px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 4px rgba($color: $colorTxtBK1, $alpha: 0.25);
+
+      &.dementia-main {
+        background-color: $colorDementia;
+      }
+
+      &.dementia-dark {
+        background-color: $colorDementiaDark;
+      }
+
+      &.dementia-light {
+        background-color: $colorDementiaLight;
+      }
+
+      &.depression-main {
+        background-color: $colorDepression;
+      }
+
+      &.depression-dark {
+        background-color: $colorDepressionDark;
+      }
+
+      &.depression-light {
+        background-color: $colorDepressionLight;
+      }
+
+      &.stress-main {
+        background-color: $colorStress;
+      }
+
+      &.stress-dark {
+        background-color: $colorStressDark;
+      }
+
+      &.stress-light {
+        background-color: $colorStressLight;
+      }
+
+      &.common-alert {
+        background-color: $colorAlert;
+      }
+
+      &.common-gray {
+        background-color: $colorCommonGR1;
+      }
+    }
+
+    .color-info {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        @include fontBodyM-EN($color: $colorTxtDGR2);
+
+        & + span {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  .fonts {
+    padding: 48px 16px 48px 40px;
+    background-color: #f9f9f9;
+    font-family: "NanumBarunGothic", sans-serif;
+
+    .bold {
+      margin-bottom: 16px;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .regular {
+      margin-bottom: 16px;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    .light {
+      margin-bottom: 16px;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    .ultralight {
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      font-weight: 200;
+    }
+  }
+}
+
+/*<----------솔루션 solution---------->*/
+.solution {
+  .prototype {
+    .item-wrap {
+      margin-bottom: 32px;
+
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        .prototype__title {
+          color: $colorDementiaDark;
+        }
+      }
+
+      &:nth-of-type(7),
+      &:nth-of-type(8) {
+        .prototype__title {
+          color: $colorDepressionDark;
+        }
+      }
+    }
+
+    .img-wrap {
+      width: 328px;
+      margin: 0 auto;
+    }
+
+    .txt-wrap {
+      padding: 0 16px;
+    }
+
+    .prototype__title {
+      margin-bottom: 16px;
+      @include fontTitleM-EN($color: $colorStressDark, $align: center);
+      word-break: keep-all;
+    }
+
+    .prototype__info {
+      @include fontBodyM-KR($color: $colorTxtDGR2);
+      // word-break: keep-all;
+    }
+  }
+}
+
+/*<----------결론 conclusion---------->*/
+.conclusion {
+  .txt-wrap {
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+
+  .conclusion__title {
+    margin-bottom: 16px;
+    @include fontTitleM-KR($color: $colorTxtDGR1);
+  }
+
+  .conclusion__details li {
+    margin-left: 24px;
+    @include fontBodyM-KR($color: $colorTxtDGR2);
+    list-style-type: disc;
+    word-break: keep-all;
+
+    & + li {
+      margin-top: 10px;
+    }
+  }
+}
+
+/*<----------푸터 footer---------->*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  background-color: #212121;
+
+  .copyright {
+    @include fontBodyS-EN($colorTxtWH1, center);
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑, 노트북 Desktop, Laptop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 1024px) {
+  .project-link {
+    margin: 96px auto;
+    padding: 0 48px;
+    border-radius: 20px;
+    @include fontBodyL-KR($colorTxtWH1, center);
+  }
+}
