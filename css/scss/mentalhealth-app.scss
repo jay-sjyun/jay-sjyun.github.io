@@ -42,19 +42,7 @@ $colorCommonGR1: #5d5d5d;
   }
 }
 
-// .mentalhealth-outer-wrap {
-//   max-width: 1024px;
-//   margin: 0 auto;
-
-//   .project-main {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
-
 /*<----------메인 main---------->*/
-
 /*<----------공통 common---------->*/
 .project-link-wrap {
   display: flex;
@@ -113,7 +101,7 @@ $colorCommonGR1: #5d5d5d;
   }
 
   .img-wrap {
-    width: 132px;
+    width: 152px;
   }
 
   .profile {
@@ -317,6 +305,7 @@ $colorCommonGR1: #5d5d5d;
     padding: 48px 16px 48px 40px;
     background-color: #f9f9f9;
     font-family: "NanumBarunGothic", sans-serif;
+    line-height: 1.3;
 
     .bold {
       margin-bottom: 16px;
@@ -337,7 +326,6 @@ $colorCommonGR1: #5d5d5d;
     }
 
     .ultralight {
-      margin-bottom: 16px;
       font-size: 1.6rem;
       font-weight: 200;
     }
@@ -363,6 +351,10 @@ $colorCommonGR1: #5d5d5d;
         .prototype__title {
           color: $colorDepressionDark;
         }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
 
@@ -432,8 +424,143 @@ $colorCommonGR1: #5d5d5d;
 ================================================*/
 @media only screen and (min-width: 672px) {
   .main {
-    max-width: 672px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*<----------소개 overview---------->*/
+  .overview {
+    width: 672px;
+
+    .content {
+      dd {
+        max-width: 420px;
+      }
+    }
+  }
+
+  /*<----------페르소나 persona---------->*/
+  .persona {
+    width: 672px;
+
+    .profile {
+      width: 176px;
+    }
+
+    .goals {
+      width: 297px;
+      margin: 0;
+      padding-top: 55px;
+    }
+
+    .complaint {
+      margin-top: 8px;
+    }
+  }
+
+  /*<----------문제점 problems---------->*/
+  .problems {
+    .section__title {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .txt-wrap {
+      width: 672px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /*<----------문제 해결 problem-solving---------->*/
+  .problem-solving {
+    .section__title {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .txt-wrap {
+      width: 672px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .color-theme {
+      width: 672px;
+      padding: 16px;
+
+      .color-theme__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .color-theme__list li {
+        width: 312px;
+
+        & + li {
+          margin-top: 0;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          margin-top: 32px;
+        }
+      }
+
+      .color-sample {
+        width: 93px;
+        height: 93px;
+      }
+    }
+
+    .fonts {
+      padding: 48px 16px;
+
+      .fonts__list {
+        width: 640px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  /*<----------솔루션 solution---------->*/
+  .solution {
+    width: 672px;
+
+    .prototype {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .item-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: -128px;
+
+        &:nth-last-of-type(even) {
+          .img-wrap {
+            order: 2;
+          }
+        }
+      }
+
+      .img-wrap {
+        flex-shrink: 0;
+      }
+
+      .prototype__title {
+        @include fontTitleM-EN($color: $colorStressDark, $align: left);
+      }
+    }
+  }
+
+  /*<----------결론 conclusion---------->*/
+  .conclusion {
+    width: 672px;
   }
 }
 
@@ -444,14 +571,225 @@ $colorCommonGR1: #5d5d5d;
 ================================================*/
 @media only screen and (min-width: 1024px) {
   .body-wrap {
-    max-width: 1024px;
+    width: 1024px;
     margin: 0 auto;
   }
 
+  /*<----------메인 main---------->*/
+  /*<----------공통 common---------->*/
   .project-link {
     margin: 96px auto;
     padding: 0 48px;
     border-radius: 20px;
     @include fontBodyL-KR($colorTxtWH1, center);
+  }
+
+  .section {
+    margin-bottom: 96px;
+  }
+
+  .section__title {
+    width: 816px;
+    margin: 0 auto 64px auto;
+    padding-bottom: 16px;
+    @include fontHeadlineL;
+  }
+
+  /*<----------소개 overview---------->*/
+  .overview {
+    width: 1024px;
+
+    .content {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+
+      dt {
+        @include fontTitleL-KR($color: $colorTxtDGR1);
+      }
+
+      dd {
+        max-width: 640px;
+        @include fontBodyL-KR($color: $colorTxtDGR2);
+        word-break: keep-all;
+      }
+    }
+  }
+
+  /*<----------페르소나 persona---------->*/
+  .persona {
+    width: 1024px;
+
+    .content {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    .content__title {
+      @include fontTitleL-KR;
+    }
+
+    ul li {
+      @include fontBodyL-KR($color: $colorTxtDGR2);
+    }
+
+    .goals {
+      padding-top: 45px;
+    }
+
+    .complaint {
+      padding: 32px;
+    }
+  }
+
+  /*<----------문제점 problems---------->*/
+  .problems {
+    .section__title {
+      width: 816px;
+    }
+
+    .img-wrap {
+      margin-bottom: 64px;
+    }
+
+    .txt-wrap {
+      width: 816px;
+      padding: 0px;
+    }
+
+    .problems__title {
+      margin-bottom: 24px;
+      @include fontTitleL-KR($color: $colorTxtDGR1);
+    }
+
+    .problems__details li {
+      @include fontBodyL-KR($color: $colorTxtDGR2);
+    }
+
+    .test-start-end {
+      margin-bottom: 64px;
+    }
+  }
+
+  /*<----------문제 해결 problem-solving---------->*/
+  .problem-solving {
+    .section__title {
+      width: 816px;
+    }
+
+    .txt-wrap {
+      width: 816px;
+      padding: 0;
+    }
+
+    .problem-solving__title {
+      margin-bottom: 24px;
+      @include fontTitleL-EN($color: $colorTxtDGR1);
+    }
+
+    .problem-solving__details li {
+      @include fontBodyL-KR($color: $colorTxtDGR2);
+    }
+
+    .color-theme {
+      width: 816px;
+      padding: 32px 0;
+
+      .color-theme__list {
+        justify-content: flex-start;
+      }
+
+      .color-theme__list li {
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          margin-right: 85px;
+        }
+      }
+
+      .color-theme__title {
+        margin-bottom: 24px;
+        @include fontTitleL-KR($color: $colorTxtDGR1);
+      }
+
+      .color-info {
+        span {
+          @include fontBodyL-EN($color: $colorTxtDGR2);
+        }
+      }
+    }
+
+    .fonts {
+      .fonts__list {
+        width: 816px;
+      }
+    }
+  }
+
+  /*<----------솔루션 solution---------->*/
+  .solution {
+    width: 816px;
+
+    .prototype {
+      width: 816px;
+
+      .item-wrap {
+        &:nth-of-type(odd) .txt-wrap {
+          padding-left: 32px;
+        }
+        &:nth-of-type(even) .txt-wrap {
+          padding-right: 32px;
+        }
+      }
+
+      .img-wrap {
+        width: 400px;
+      }
+
+      .txt-wrap {
+        padding: 0 16px;
+      }
+
+      .prototype__title {
+        margin-bottom: 24px;
+        @include fontTitleL-EN($color: $colorStressDark, $align: left);
+      }
+
+      .prototype__info {
+        @include fontBodyL-KR($color: $colorTxtDGR2);
+        // word-break: keep-all;
+      }
+    }
+  }
+
+  /*<----------결론 conclusion---------->*/
+  .conclusion {
+    width: 816px;
+
+    .txt-wrap {
+      width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    .conclusion__title {
+      margin-bottom: 24px;
+      @include fontTitleL-KR($color: $colorTxtDGR1);
+    }
+
+    .conclusion__details li {
+      @include fontBodyL-KR($color: $colorTxtDGR2);
+    }
+  }
+
+  /*<----------푸터 footer---------->*/
+  .footer {
+    padding: 40px 24px;
+
+    .copyright {
+      @include fontBodyM-EN($colorTxtWH1, center);
+    }
   }
 }
