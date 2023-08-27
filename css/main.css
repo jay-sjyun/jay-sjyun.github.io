@@ -1,5 +1,220 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+/*<----------메인 공통 main common---------->*/
+.main {
+  max-width: 512px;
+  margin: 64px auto;
+}
+
+.section {
+  margin: 64px auto;
+  padding: 0 16px;
+}
+
+.section__title {
+  margin-bottom: 32px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+}
+
+.section__para {
+  margin-bottom: 32px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  word-break: keep-all;
+}
+
+.content {
+  margin-bottom: 32px;
+}
+
+.content__title {
+  margin-bottom: 10px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1e1e1e;
+}
+.content__title .criterion {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  vertical-align: bottom;
+}
+
+.content__txt {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  word-break: keep-all;
+}
+.content__txt .highlight {
+  text-decoration: underline;
+}
+.content__txt + .content__txt {
+  margin-top: 10px;
+}
+
+.sidenote {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #5b5b5b;
+  word-break: keep-all;
+}
+
+.link-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+
+.project-link {
+  display: inline-block;
+  min-height: 40px;
+  padding: 10px 24px;
+  border: 1px solid #1e1e1e;
+  border-radius: 40px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+.project-link + .project-link {
+  margin-left: 16px;
+}
+
+.section-divider {
+  width: 64px;
+  height: 1px;
+  margin: 64px auto;
+  background-color: #dddddd;
+}
+
+/*<----------푸터 footer---------->*/
+.footer {
+  background-color: #212121;
+}
+.footer .copyright {
+  max-width: 512px;
+  padding: 32px 16px;
+  margin: 0 auto;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑, 노트북 PC Desktop, Laptop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 1152px) {
+  /*<----------메인 공통 main common---------->*/
+  .main {
+    max-width: 800px;
+    margin: 96px auto;
+  }
+  .section {
+    margin: 96px auto;
+  }
+  .section__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000;
+  }
+  .section__para {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1e1e1e;
+  }
+  .content__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1e1e1e;
+  }
+  .content__title .criterion {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1e1e1e;
+  }
+  .content__txt {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1e1e1e;
+  }
+  .content__txt.sidenote {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #5b5b5b;
+  }
+  .sidenote {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #5b5b5b;
+  }
+  .project-link {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1e1e1e;
+  }
+  .section-divider {
+    width: 96px;
+    margin: 96px auto;
+  }
+  /*<----------푸터 footer---------->*/
+  .footer .copyright {
+    max-width: 800px;
+    padding: 48px 16px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -7,6 +222,7 @@ html {
 
 body {
   background-color: #fff;
+  color: #1e1e1e;
 }
 
 /*==============================================
@@ -14,17 +230,18 @@ body {
   모바일 Mobile
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-/*<----------포트폴리오 메인 portfolio main---------->*/
 /*<----------헤더 header---------->*/
 .header {
   position: sticky;
   top: 0;
+  z-index: 500;
   background-color: #fff;
   border-bottom: 1px solid #dddddd;
 }
 .header .nav {
   display: flex;
   justify-content: space-between;
+  max-width: 400px;
   min-height: 64px;
   margin: 0 auto;
   padding: 8px 6px;
@@ -35,16 +252,19 @@ body {
   align-items: center;
   min-height: 48px;
   padding: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #000;
-  text-align: left;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1e1e1e;
   box-sizing: border-box;
+  transition: 0.2s ease-in-out;
 }
 .header .nav__menu + .nav__menu {
   margin-left: 4px;
+}
+.header .nav__menu:hover, .header .nav__menu:focus {
+  color: #0063ec;
 }
 .header .nav__menu-list {
   display: flex;
@@ -52,776 +272,373 @@ body {
 
 /*<----------메인 공통 main common---------->*/
 .main {
-  max-width: 504px;
-  margin: 60px auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/*<----------소개 intro---------->*/
+.intro .logo-area {
+  width: 216px;
+  margin-bottom: 64px;
+}
+.intro .sidenote {
+  margin-top: 16px;
+}
+
+/*<----------프로젝트 projects---------->*/
+.project .content {
+  margin-bottom: 16px;
+}
+.project .project__item {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-sizing: border-box;
+  min-height: 184px;
   padding: 0 16px;
 }
-
-.section-wrap {
-  margin-bottom: 60px;
+.project .project__item .img-wrap {
+  align-self: flex-end;
 }
-
-.section-title {
-  margin-bottom: 24px;
-  font-family: "Roboto", sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.285;
-  color: #000;
-  text-align: center;
+.project .project__item:hover .img-wrap, .project .project__item:focus .img-wrap {
+  transform: translateY(0);
 }
-
-.section-divider {
-  width: 80px;
-  height: 1px;
-  margin: 60px auto;
-  background-color: #dddddd;
+.project .txt-wrap {
+  width: 100px;
+  padding: 20px 0;
 }
-
-/*<----------인트로 intro---------->*/
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.intro .logo-area {
-  width: 246px;
-  margin-bottom: 24px;
-}
-.intro .intro__txt {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #000;
-  text-align: center;
-}
-.intro .intro__optimization {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.333;
-  color: #47484a;
-  text-align: center;
-}
-
-/*<----------프로젝트 공통 project common---------->*/
-.project__list li + li {
-  margin-top: 10px;
-}
-
-/*<----------UI/UX 디자인 UI/UX design---------->*/
-.uiux-design .mentalhealth-app {
+.project .img-wrap {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-left: 41px;
-  padding-right: 20px;
+  width: 128px;
+  height: 152px;
+  border-radius: 8px 8px 0 0;
+  transform: translateY(24px);
+  transition: 0.25s ease-in-out;
+}
+.project .img-wrap img {
+  object-fit: cover;
+}
+.project .mentalhealth-app {
   background-color: #0063ec;
 }
-.uiux-design .mentalhealth-app .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
+.project .mentalhealth-app .txt-wrap {
+  margin-right: 32px;
+  text-align: right;
 }
-.uiux-design .mentalhealth-app .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
+.project .mentalhealth-app .content__title {
   color: #fff;
-  text-align: left;
 }
-.uiux-design .mentalhealth-app .project__info {
-  font-family: "Noto Sans KR", sans-serif;
+.project .mentalhealth-app .project__hashtag {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.333;
+  line-height: 1.5;
   color: #fff;
-  text-align: left;
 }
-.uiux-design .mentalhealth-app .project__img-wrap {
-  width: 116px;
-  margin-left: 77px;
+.project .mentalhealth-app .img-wrap {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
 }
-.uiux-design .rebook-app {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 41px;
-  background-color: #27ae61;
-}
-.uiux-design .rebook-app .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
-  align-items: flex-end;
-  order: 2;
-}
-.uiux-design .rebook-app .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #fff;
-  text-align: left;
-}
-.uiux-design .rebook-app .project__info {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.333;
-  color: #fff;
-  text-align: left;
-}
-.uiux-design .rebook-app .project__img-wrap {
-  width: 116px;
-  margin-right: 69px;
-}
-
-/*<----------웹 디자인 web design---------->*/
-.web-design .careyou-web {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-left: 33px;
+.project .careyou {
   background-color: #ffe151;
 }
-.web-design .careyou-web .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
+.project .careyou .txt-wrap {
+  order: 2;
+  margin-left: 32px;
 }
-.web-design .careyou-web .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #000;
-  text-align: left;
-}
-.web-design .careyou-web .project__info {
-  font-family: "Noto Sans KR", sans-serif;
+.project .careyou .project__hashtag {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.333;
-  color: #000;
-  text-align: left;
+  line-height: 1.5;
+  color: #1e1e1e;
 }
-.web-design .careyou-web .project__img-wrap {
-  width: 168px;
-  margin-left: 42px;
+.project .careyou .img-wrap {
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.web-design .library-web {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-right: 32px;
-  padding-left: 8px;
-  border: 1px solid #000;
+.project .library {
+  border: 1px solid #1e1e1e;
   background-color: #fff;
 }
-.web-design .library-web .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
-  align-items: flex-end;
+.project .library .txt-wrap {
+  margin-right: 32px;
+  text-align: right;
+}
+.project .library .project__hashtag {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+}
+.project .library .img-wrap {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.project .momentum {
+  background-color: #27ae61;
+}
+.project .momentum .txt-wrap {
   order: 2;
+  margin-left: 32px;
 }
-.web-design .library-web .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #000;
-  text-align: left;
+.project .momentum .content__title {
+  color: #fff;
 }
-.web-design .library-web .project__info {
-  font-family: "Noto Sans KR", sans-serif;
+.project .momentum .project__hashtag {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.333;
-  color: #000;
-  text-align: left;
-}
-.web-design .library-web .project__img-wrap {
-  width: 168px;
-  margin-right: 24px;
-}
-.web-design .bentley-web {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-left: 33px;
-  background-color: #212121;
-}
-.web-design .bentley-web .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
-}
-.web-design .bentley-web .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #fff;
-  text-align: left;
 }
-.web-design .bentley-web .project__info {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.333;
-  color: #fff;
-  text-align: left;
+.project .momentum .img-wrap {
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.web-design .bentley-web .project__img-wrap {
-  width: 168px;
-  margin-left: 35px;
+.project .momentum .img-wrap img {
+  transform: translateY(-15%);
 }
-
-/*<----------그래픽 디자인 graphic design---------->*/
-.graphic-design .behance-link {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-right: 41px;
-  padding-left: 41px;
+.project .behance {
   background-color: #ff1919;
 }
-.graphic-design .behance-link .project__txt-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 138px;
-  padding: 20px 0;
-  align-items: flex-end;
-  order: 2;
+.project .behance .txt-wrap {
+  margin-right: 32px;
+  text-align: right;
 }
-.graphic-design .behance-link .project__title {
-  margin-bottom: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
+.project .behance .content__title {
   color: #fff;
-  text-align: left;
 }
-.graphic-design .behance-link .project__info {
-  font-family: "Noto Sans KR", sans-serif;
+.project .behance .project__hashtag {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.333;
+  line-height: 1.5;
   color: #fff;
-  text-align: left;
 }
-.graphic-design .behance-link .project__img-wrap {
-  width: 116px;
-  margin-right: 45px;
+.project .behance .img-wrap {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-/*<----------소개 about---------->*/
-.about .about__category {
-  margin-top: 24px;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #47484a;
-  text-align: center;
-}
-.about .about__detail {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #000;
-  text-align: center;
-}
-
+/*<----------상세정보 about---------->*/
 /*<----------연락처 contact---------->*/
-.contact .contact__info {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #000;
-  text-align: center;
-}
-
 /*<----------푸터 footer---------->*/
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 32px 16px;
   background-color: #212121;
 }
 .footer .copyright {
-  font-family: "Roboto", sans-serif;
+  padding: 32px 16px;
+  margin: 0 auto;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 1.333;
+  line-height: 1.5;
   color: #fff;
   text-align: center;
-}
-
-/*<----------리북 앱 uiux 디자인 기획안 페이지
-rebook app uiux design---------->*/
-.rebook-outer-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-/*<----------캐어유 웹사이트 디자인 기획안 페이지
-careyou website redesign---------->*/
-.careyou-outer-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-.careyou-outer-wrap .project-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.careyou-outer-wrap .project-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40px;
-  margin: 64px auto;
-  padding: 0 48px;
-  border-radius: 20px;
-  background-color: #fbd574;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #000;
-  text-align: center;
-}
-
-/*<----------평촌도서관 웹사이트 리디자인 기획안 페이지
-pyeongchon library website redesign---------->*/
-.library-outer-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-.library-outer-wrap .project-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.library-outer-wrap .project-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40px;
-  margin: 64px auto;
-  padding: 0 48px;
-  border-radius: 20px;
-  background-color: #3d5bcb;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #fff;
-  text-align: center;
-}
-
-/*<----------벤틀리 서울 웹사이트 리디자인 기획안 페이지
-bentley seoul website redesign---------->*/
-.bentley-outer-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-  background-color: #121212;
-}
-.bentley-outer-wrap .project-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.bentley-outer-wrap .project-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40px;
-  margin: 64px auto;
-  padding: 0 48px;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  background-color: #121212;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.43;
-  color: #fff;
-  text-align: center;
-}
-.bentley-outer-wrap .section-main {
-  padding: 60px 0;
-  background-color: #fff;
-}
-.bentley-outer-wrap .footer {
-  background-color: #2b2b2b;
 }
 
 /*==============================================
 |||||||||||||||||||||||||||||||||||||||||||||||||
-  태블릿 Tablet, Desktop, Laptop
+  태블릿 Tablet
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-@media only screen and (min-width: 690px) {
-  /*<----------포트폴리오 메인 portfolio main---------->*/
+@media only screen and (min-width: 480px) {
   /*<----------헤더 header---------->*/
   .header .nav {
-    max-width: 690px;
-  }
-  .header .nav__menu {
-    font-family: "Roboto", sans-serif;
-    font-size: 2.2rem;
-    font-weight: 500;
-    line-height: 1.272;
-    color: #000;
-    text-align: left;
+    max-width: 480px;
   }
   /*<----------메인 공통 main common---------->*/
   .main {
-    max-width: 690px;
-    margin: 72px auto;
+    max-width: 480px;
+  }
+  /*<----------소개 intro---------->*/
+  .logo-area {
+    width: 240px;
+  }
+  /*<----------프로젝트 projects---------->*/
+  .project .project__item {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-sizing: border-box;
+    min-height: 252px;
     padding: 0 24px;
   }
-  .section-wrap {
-    margin-bottom: 72px;
+  .project .project__item .img-wrap {
+    align-self: flex-end;
   }
-  .section-title {
-    margin-bottom: 32px;
-    font-family: "Roboto", sans-serif;
-    font-size: 3.2rem;
+  .project .project__item .txt-wrap {
+    width: 128px;
+  }
+  .project .project__item .img-wrap {
+    width: 160px;
+    height: 196px;
+    transform: translateY(36px);
+  }
+  .project .library .img-wrap {
+    border: 1px solid #1e1e1e;
+    border-bottom: none;
+  }
+  .project .momentum .img-wrap img {
+    transform: translateY(0);
+  }
+}
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑, 노트북 Desktop, Laptop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 1025px) {
+  /*<----------헤더 header---------->*/
+  .header .nav {
+    max-width: 640px;
+    padding: 8px 14px;
+  }
+  .header .nav__menu {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.25;
-    color: #000;
-    text-align: center;
+    line-height: 1.3;
+    color: #1e1e1e;
   }
-  .section-divider {
-    margin: 72px auto;
+  /*<----------메인 공통 main common---------->*/
+  .main {
+    margin: 96px auto;
+    padding: 0 24px;
+    max-width: 640px;
   }
-  /*<----------인트로 intro---------->*/
+  /*<----------소개 intro---------->*/
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
   .intro .logo-area {
-    width: 308px;
-    margin-bottom: 32px;
+    width: 256px;
+    margin-top: 6px;
+    margin-bottom: none;
   }
-  .intro .intro__txt {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.6rem;
+  .intro .content {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  /*<----------프로젝트 projects---------->*/
+  .project .content {
+    margin-bottom: 24px;
+  }
+  .project .project__item {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-sizing: border-box;
+    min-height: 252px;
+    padding: 0 48px;
+  }
+  .project .project__item .img-wrap {
+    align-self: flex-end;
+  }
+  .project .project__item .img-wrap {
+    height: 200px;
+    transform: translateY(24px);
+  }
+  .project .mentalhealth-app .project__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .project .mentalhealth-app .project__hashtag {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #000;
-    text-align: center;
+    color: #fff;
   }
-  .intro .intro__optimization {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #47484a;
-    text-align: center;
+  .project .mentalhealth-app .img-wrap {
+    width: 176px;
   }
-  /*<----------프로젝트 공통 project common---------->*/
-  .project__list li + li {
-    margin-top: 16px;
-  }
-  /*<----------UI/UX 디자인 UI/UX design---------->*/
-  .uiux-design .mentalhealth-app {
-    padding-left: 48px;
-  }
-  .uiux-design .mentalhealth-app .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .uiux-design .mentalhealth-app .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
+  .project .careyou .project__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.333;
-    color: #fff;
-    text-align: left;
+    line-height: 1.5;
+    color: #1e1e1e;
   }
-  .uiux-design .mentalhealth-app .project__info {
-    font-family: "Noto Sans KR", sans-serif;
+  .project .careyou .project__hashtag {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #fff;
-    text-align: left;
-  }
-  .uiux-design .mentalhealth-app .project__img-wrap {
-    width: 172px;
-  }
-  .uiux-design .rebook-app {
-    padding-right: 49px;
-  }
-  .uiux-design .rebook-app .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .uiux-design .rebook-app .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.333;
-    color: #fff;
-    text-align: left;
-  }
-  .uiux-design .rebook-app .project__info {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #fff;
-    text-align: left;
-  }
-  .uiux-design .rebook-app .project__img-wrap {
-    width: 172px;
-  }
-  /*<----------웹 디자인 web design---------->*/
-  .web-design .careyou-web {
-    padding-left: 55px;
-  }
-  .web-design .careyou-web .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .web-design .careyou-web .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.333;
-    color: #000;
-    text-align: left;
-  }
-  .web-design .careyou-web .project__info {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #000;
-    text-align: left;
-  }
-  .web-design .careyou-web .project__img-wrap {
-    width: 252px;
-    margin-left: 44px;
-  }
-  .web-design .library-web {
-    padding-right: 72px;
-    padding-left: 36px;
-  }
-  .web-design .library-web .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .web-design .library-web .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.333;
-    color: #000;
-    text-align: left;
-  }
-  .web-design .library-web .project__info {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #000;
-    text-align: left;
-  }
-  .web-design .library-web .project__img-wrap {
-    width: 252px;
-    margin-right: 40px;
-  }
-  .web-design .bentley-web {
-    padding-left: 58px;
-  }
-  .web-design .bentley-web .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .web-design .bentley-web .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.333;
-    color: #fff;
-    text-align: left;
-  }
-  .web-design .bentley-web .project__info {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #fff;
-    text-align: left;
-  }
-  .web-design .bentley-web .project__img-wrap {
-    width: 252px;
-    margin-left: 37px;
-  }
-  /*<----------그래픽 디자인 graphic design---------->*/
-  .graphic-design .behance-link .project__txt-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    padding: 20px 0;
-  }
-  .graphic-design .behance-link .project__title {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.333;
-    color: #fff;
-    text-align: left;
-  }
-  .graphic-design .behance-link .project__info {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #fff;
-    text-align: left;
-  }
-  .graphic-design .behance-link .project__img-wrap {
-    width: 164px;
-  }
-  /*<----------소개 about---------->*/
-  .about .about__category {
-    margin-top: 32px;
-    font-family: "Roboto", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 500;
-    line-height: 1.333;
-    color: #47484a;
-    text-align: center;
-  }
-  .about .about__detail {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #000;
-    text-align: center;
+    color: #1e1e1e;
   }
-  /*<----------연락처 contact---------->*/
-  .contact .contact__info {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
+  .project .careyou .img-wrap {
+    width: 284px;
+  }
+  .project .library .project__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1e1e1e;
+  }
+  .project .library .project__hashtag {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #000;
-    text-align: center;
+    color: #1e1e1e;
+  }
+  .project .library .img-wrap {
+    width: 284px;
+  }
+  .project .momentum .project__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .project .momentum .project__hashtag {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .project .momentum .img-wrap {
+    width: 284px;
+  }
+  .project .momentum .img-wrap img {
+    transform: translateY(-25%);
+  }
+  .project .behance .project__title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .project .behance .project__hashtag {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .project .behance .img-wrap {
+    width: 176px;
   }
   /*<----------푸터 footer---------->*/
-  .footer {
-    padding: 40px 24px;
-  }
   .footer .copyright {
-    font-family: "Roboto", sans-serif;
+    padding: 48px 24px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.43;
-    color: #fff;
-    text-align: center;
-  }
-  /*<----------캐어유 웹사이트 디자인 기획안 페이지
-  careyou website redesign---------->*/
-  .careyou-outer-wrap .project-link {
-    margin: 96px auto;
-    padding: 0 48px;
-    border-radius: 20px;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #000;
-    text-align: center;
-  }
-  /*<----------평촌도서관 웹사이트 리디자인 기획안 페이지
-  pyeongchon library website redesign---------->*/
-  .library-outer-wrap .project-link {
-    margin: 96px auto;
-    padding: 0 48px;
-    border-radius: 20px;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
     color: #fff;
-    text-align: center;
-  }
-  /*<----------벤틀리 서울 웹사이트 리디자인 기획안 페이지
-  bentley seoul website redesign---------->*/
-  .bentley-outer-wrap .project-link {
-    margin: 96px auto;
-    padding: 0 48px;
-    border-radius: 20px;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

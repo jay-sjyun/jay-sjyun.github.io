@@ -1,0 +1,1173 @@
+@import "common.scss";
+
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $colorTxtWH1;
+  color: $colorTxtBK2;
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+/*<----------정신건강테스트 앱 mental health test app---------->*/
+/*<----------헤더 header---------->*/
+.header.mentalhealth-app {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background: #4777d9;
+}
+
+.main.mentalhealth-app {
+  /*<----------메인 공통 main common---------->*/
+  .project-link {
+    &:hover,
+    &:focus {
+      border: 1px solid #4777d9;
+      background-color: #4777d9;
+      color: $colorTxtWH1;
+    }
+  }
+
+  /*<----------문제점 problems---------->*/
+  .problems {
+    .old-screenshots {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 8px);
+      }
+
+      .card__img-wrap {
+        order: 2;
+        overflow: hidden;
+
+        img {
+          border: 1px solid $colorLineLGR1;
+          border-radius: 8px;
+        }
+      }
+
+      .card__title {
+        margin-bottom: 10px;
+        @include fontBody($size: 1.2rem, $weight: $fontWeightR, $color: $colorTxtGR1);
+      }
+    }
+
+    .content__txt-wrap {
+      & + .content__txt-wrap {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  /*<----------해결 방안 solution---------->*/
+  .solution {
+    padding: 0;
+
+    .section__title {
+      padding: 0 16px;
+    }
+
+    .section__para {
+      padding: 0 16px;
+    }
+
+    .content:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .content__title {
+        width: 100%;
+      }
+    }
+
+    .content__title {
+      padding: 0 16px;
+    }
+
+    .solution__detail {
+      padding: 0 16px;
+      counter-reset: mentalHealthWireframe;
+
+      .content__txt {
+        &::before {
+          margin-right: 4px;
+          counter-increment: mentalHealthWireframe;
+          content: counter(mentalHealthWireframe) ".";
+        }
+      }
+    }
+
+    .wireflow-wrap {
+      margin-top: 32px;
+      padding: 32px 16px;
+      background-color: #f5f9ff;
+    }
+
+    .color-theme {
+      display: inline-flex;
+      flex-direction: column;
+      margin: 32px auto 0;
+      padding: 0 16px;
+    }
+
+    .theme {
+      display: flex;
+      flex-direction: column;
+
+      & + .theme {
+        margin-top: 16px;
+      }
+
+      &.dementia {
+        .color:first-child .color__sample {
+          background-color: #4eb6ad;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #215f5a;
+        }
+        .color:nth-child(3) .color__sample {
+          background-color: #f8fffe;
+        }
+      }
+
+      &.depression {
+        .color:first-child .color__sample {
+          background-color: #80c783;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #3e7040;
+        }
+        .color:nth-child(3) .color__sample {
+          background-color: #f8fff8;
+        }
+      }
+
+      &.stress {
+        .color:first-child .color__sample {
+          background-color: #4777d9;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #2a4672;
+        }
+        .color:nth-child(3) .color__sample {
+          background-color: #f5f9ff;
+        }
+      }
+
+      &.common {
+        .color:first-child .color__sample {
+          background-color: #f60033;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #5d5d5d;
+        }
+      }
+    }
+
+    .color-theme__title {
+      margin-bottom: 10px;
+      @include fontBody;
+    }
+
+    .color-group {
+      display: flex;
+    }
+
+    .color {
+      & + .color {
+        margin-left: 12px;
+      }
+    }
+
+    .color__sample {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      color: transparent;
+    }
+
+    .color__code {
+      @include fontBody($size: 1.2rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+    }
+
+    .font-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding: 32px 16px;
+      background-color: $colorBgLGR1;
+
+      .font-group li {
+        font-family: "NanumBarunGothic", sans-serif;
+
+        & + li {
+          margin-top: 16px;
+        }
+      }
+
+      .font-bold {
+        font-size: 2.2rem;
+        font-weight: 600;
+      }
+
+      .font-regular {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      .font-light {
+        font-size: 1.7rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  /*<----------최종 디자인 final design---------->*/
+  .final-design {
+    .section__title {
+      padding-bottom: 16px;
+    }
+
+    .content + .content {
+      margin-top: 48px;
+    }
+
+    .content__img-wrap {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    // .content__title {
+    //   text-align: center;
+    // }
+  }
+}
+
+/*<----------캐어유 홈페이지 careyou website---------->*/
+/*<----------헤더 header---------->*/
+.header.careyou {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background: linear-gradient(#fbd574, #fed261);
+}
+
+.main.careyou {
+  /*<----------메인 공통 main common---------->*/
+  .project-link {
+    &:hover,
+    &:focus {
+      border: 1px solid #fbd574;
+      background-color: #fbd574;
+      color: $colorTxtBK1;
+    }
+  }
+
+  /*<----------개요 overview---------->*/
+  .overview {
+    .content:nth-child(2) .sidenote {
+      margin-top: 10px;
+    }
+  }
+
+  /*<----------주요점 highlights---------->*/
+  .highlights {
+    .content__txt {
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        display: block;
+        flex-shrink: 0;
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+        margin-top: 8px;
+        border-radius: 4px;
+        background-color: $colorTxtBK2;
+        content: "";
+      }
+    }
+  }
+
+  /*<----------와이어프레임 wireframes---------->*/
+  .wireframes {
+    .content {
+      margin-bottom: 48px;
+    }
+
+    .content__img-wrap {
+      max-width: 160px;
+      margin: 0 auto 16px;
+    }
+
+    .content__title {
+      text-align: center;
+    }
+  }
+
+  /*<----------스타일 가이드 style guide---------->*/
+  .style-guide {
+    padding: 0;
+
+    .section__title {
+      padding: 0 16px;
+    }
+
+    .content:first-child {
+      padding: 0 16px;
+    }
+
+    .content:nth-child(2),
+    .content:nth-child(3) {
+      .content__title,
+      .content__txt {
+        padding: 0 16px;
+      }
+    }
+
+    .color-theme {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 400px;
+      margin: 32px auto 0;
+      padding: 8px 0;
+    }
+
+    .theme {
+      display: flex;
+      flex-direction: column;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-top: 32px;
+      }
+
+      &.kiosk {
+        .color:first-child .color__sample {
+          background-color: #6eb571;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #f8fff8;
+        }
+      }
+
+      &.t-pro {
+        .color:first-child .color__sample {
+          background-color: #1998d1;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #edf1f8;
+        }
+      }
+
+      &.temi {
+        .color:first-child .color__sample {
+          background-color: #ed9a27;
+        }
+        .color:nth-child(2) .color__sample {
+          background-color: #fefbf6;
+        }
+      }
+    }
+
+    .color-theme__title {
+      margin-bottom: 10px;
+      @include fontBody;
+    }
+
+    .color-group {
+      display: flex;
+    }
+
+    .color {
+      & + .color {
+        margin-left: 12px;
+      }
+    }
+
+    .color__sample {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      color: transparent;
+    }
+
+    .color__code {
+      @include fontBody($size: 1.2rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+    }
+
+    .font-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding: 32px 16px;
+      background-color: $colorBgLGR1;
+
+      .font-group li {
+        font-family: "NanumSquare", sans-serif;
+
+        & + li {
+          margin-top: 16px;
+        }
+      }
+
+      .font-xbold {
+        font-size: 2.2rem;
+        font-weight: 800;
+      }
+
+      .font-bold {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .font-regular {
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+
+      .font-light {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+    }
+
+    .icon-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+
+      img {
+        width: 64px;
+
+        & + img {
+          margin-left: 16px;
+        }
+      }
+
+      &.kiosk {
+        margin-top: 32px;
+        background-color: $colorBgLGR1;
+      }
+
+      &.temi {
+        background-color: #fefbf6;
+      }
+    }
+  }
+
+  /*<----------최종 디자인 final design---------->*/
+  .final-design {
+    .content__img-wrap {
+      overflow: hidden;
+      border: 1px solid $colorLineLGR1;
+      border-radius: 8px;
+    }
+
+    .content__txt {
+      margin-top: 32px;
+    }
+  }
+}
+
+/*<----------평촌도서관 pyeongchon library---------->*/
+.main.library {
+  /*<----------메인 공통 main common---------->*/
+  .project-link {
+    &:hover,
+    &:focus {
+      border: 1px solid #31a1ab;
+      background-color: #31a1ab;
+      color: $colorTxtWH1;
+    }
+  }
+
+  .db-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: #31a1ab;
+    }
+  }
+
+  .visible-on-pc {
+    display: none;
+  }
+
+  /*<----------문제점 및 해결방안 problems & solution---------->*/
+  .problems {
+    .section__para {
+      margin-bottom: 10px;
+    }
+
+    .sidenote {
+      margin-bottom: 32px;
+    }
+
+    .content__img-wrap {
+      overflow: hidden;
+      margin-bottom: 32px;
+      border-radius: 8px;
+    }
+
+    .problems-list {
+      counter-reset: libraryProblem;
+
+      .content__txt {
+        &::before {
+          margin-right: 4px;
+          counter-increment: libraryProblem;
+          content: counter(libraryProblem) ".";
+        }
+      }
+    }
+  }
+
+  /*<----------와이어프레임 및 기능 소개 wireframe & features---------->*/
+  .features {
+    .content {
+      margin-bottom: 48px;
+
+      &.notice .content__txt:first-of-type {
+        margin-bottom: 48px;
+      }
+    }
+
+    .section__para {
+      margin-bottom: 10px;
+    }
+
+    .sidenote {
+      margin-bottom: 32px;
+    }
+
+    .content__img-wrap {
+      margin-bottom: 16px;
+    }
+  }
+
+  .header-features {
+    counter-reset: libraryFeatures1;
+
+    .content__txt {
+      &::before {
+        margin-right: 4px;
+        counter-increment: libraryFeatures1;
+        content: counter(libraryFeatures1) ".";
+      }
+    }
+  }
+
+  .search-features {
+    counter-reset: libraryFeatures2 3;
+
+    .content__txt {
+      &::before {
+        margin-right: 4px;
+        counter-increment: libraryFeatures2;
+        content: counter(libraryFeatures2) ".";
+      }
+    }
+  }
+
+  .signup-features {
+    counter-reset: libraryFeatures3;
+
+    .content__txt {
+      &::before {
+        margin-right: 4px;
+        counter-increment: libraryFeatures3;
+        content: counter(libraryFeatures3) ".";
+      }
+    }
+  }
+
+  /*<----------스타일 가이드 style guide---------->*/
+  .style-guide {
+    padding: 0;
+
+    .section__title {
+      padding: 0 16px;
+    }
+
+    .content {
+      &:first-child,
+      &:nth-child(3) {
+        padding: 0 16px;
+      }
+
+      &:nth-child(2) {
+        .content__title,
+        .content__txt {
+          padding: 0 16px;
+        }
+      }
+    }
+
+    .color-theme {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding: 8px 16px;
+    }
+
+    .color-group {
+      display: flex;
+      flex-grow: 0;
+    }
+
+    .color {
+      & + .color {
+        margin-left: 12px;
+      }
+
+      &:first-child .color__sample {
+        background-color: #43b5be;
+      }
+
+      &:nth-child(2) .color__sample {
+        background-color: #3d5bcb;
+      }
+
+      &:nth-child(3) .color__sample {
+        background-color: #072559;
+      }
+    }
+
+    .color__sample {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      color: transparent;
+    }
+
+    .color__code {
+      @include fontBody($size: 1.2rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+    }
+
+    .font-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding: 32px 16px;
+      background-color: $colorBgLGR1;
+
+      .font-group li {
+        font-family: "NanumSquare", sans-serif;
+
+        & + li {
+          margin-top: 16px;
+        }
+      }
+
+      .font-xbold {
+        font-size: 2.2rem;
+        font-weight: 800;
+      }
+
+      .font-bold {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .font-regular {
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+
+      .font-light {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+    }
+
+    .icon-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding: 8px 0;
+    }
+
+    .icon-list {
+      display: grid;
+      grid-template-columns: 72px 72px 72px;
+      grid-template-rows: 72px 72px;
+      gap: 24px;
+      flex-grow: 0;
+    }
+  }
+
+  /*<----------최종 디자인 final design---------->*/
+  .final-design {
+    .content {
+      margin-bottom: 48px;
+    }
+
+    .content__img-wrap {
+      overflow: hidden;
+      border: 1px solid $colorLineLGR1;
+      border-radius: 8px;
+    }
+  }
+}
+
+/*<----------Momentum 클론 Momentum clone---------->*/
+.main.momentum {
+  /*<----------메인 공통 main common---------->*/
+  .project-link {
+    &:hover,
+    &:focus {
+      border: 1px solid #27ae61;
+      background-color: #27ae61;
+      color: $colorTxtWH1;
+    }
+  }
+  /*<----------기능 features---------->*/
+  .features {
+    .sidenote {
+      margin-bottom: 32px;
+    }
+
+    .content {
+      margin-bottom: 48px;
+    }
+
+    .content__img-wrap {
+      overflow: hidden;
+      margin: 0 auto 16px;
+      border: 1px solid $colorTxtBK2;
+      border-radius: 8px;
+    }
+
+    .home-features {
+      counter-reset: momentumFeatures;
+
+      .content__txt {
+        display: flex;
+
+        &::before {
+          margin-right: 4px;
+          counter-increment: momentumFeatures;
+          content: counter(momentumFeatures) ".";
+        }
+      }
+    }
+  }
+
+  /*<----------최종 디자인 final design---------->*/
+  .final-design {
+    .content__img-wrap {
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  태블릿 Tablet
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 744px) {
+  /*<----------정신건강테스트 앱 mental health test app---------->*/
+  .main.mentalhealth-app {
+    /*<----------문제점 problems---------->*/
+    .problems {
+      .content + .content {
+        margin-top: 48px;
+      }
+
+      .old-screenshots {
+        margin-bottom: 32px;
+      }
+    }
+
+    /*<----------해결 방안 solution---------->*/
+    .solution {
+      padding: 0;
+
+      .color-theme {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .theme {
+        & + .theme {
+          margin-top: 0;
+        }
+
+        &.dementia,
+        &.stress {
+          margin-right: 16px;
+        }
+
+        &.stress,
+        &.common {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    /*<----------최종 디자인 final design---------->*/
+    .final-design {
+      .content + .content {
+        margin-top: 64px;
+      }
+    }
+  }
+
+  /*<----------캐어유 홈페이지 careyou website---------->*/
+  .main.careyou {
+    /*<----------와이어프레임 wireframes---------->*/
+    .wireframes {
+      .content__img-wrap {
+        max-width: 100%;
+      }
+
+      .content__title {
+        text-align: left;
+      }
+    }
+
+    /*<----------스타일 가이드 style guide---------->*/
+    .style-guide {
+      .color-theme {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+
+        .theme {
+          margin-right: 0;
+
+          &:last-child {
+            margin-top: 0px;
+          }
+
+          & + .theme {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑, 노트북 PC Desktop, Laptop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 1025px) {
+  /*<----------정신건강테스트 앱 mental health test app---------->*/
+  /*<----------헤더 header---------->*/
+  .header.mentalhealth-app {
+    overflow: hidden;
+
+    .img-wrap {
+      max-width: 800px;
+    }
+
+    img {
+      max-width: initial;
+    }
+  }
+
+  .main.mentalhealth-app {
+    /*<----------문제점 problems---------->*/
+    .problems {
+      .section__para {
+        margin-bottom: 64px;
+      }
+
+      .content + .content {
+        margin-top: 64px;
+      }
+
+      .old-screenshots {
+        justify-content: flex-start;
+
+        .card {
+          width: initial;
+
+          &:first-child {
+            margin-right: 24px;
+          }
+        }
+
+        .card__img-wrap img {
+          width: 256px;
+        }
+
+        .card__title {
+          @include fontBody($size: 1.4rem, $weight: $fontWeightR, $color: $colorTxtGR1);
+        }
+      }
+    }
+
+    /*<----------해결 방안 solution---------->*/
+    .solution {
+      .content + .content {
+        margin-top: 64px;
+      }
+
+      .content:nth-child(2) {
+        align-items: flex-start;
+      }
+
+      .wireflow-wrap {
+        margin-top: 48px;
+      }
+
+      .color-theme {
+        margin: 48px auto 0;
+      }
+
+      .theme {
+        &.dementia,
+        &.stress {
+          margin-right: 32px;
+        }
+
+        &.stress,
+        &.common {
+          margin-top: 32px;
+        }
+      }
+
+      .color-theme__title {
+        @include fontBody($size: 1.6rem);
+      }
+
+      .color__sample {
+        width: 72px;
+        height: 72px;
+      }
+
+      .color__code {
+        @include fontBody($size: 1.4rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+      }
+
+      .font-wrap {
+        justify-content: flex-start;
+        margin-top: 48px;
+        padding: 48px 32px;
+      }
+    }
+
+    /*<----------최종 디자인 final design---------->*/
+    .final-design {
+      .content + .content {
+        margin-top: 0;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+
+        &:nth-child(odd) {
+          .content__img-wrap {
+            flex-shrink: 0;
+            margin-right: 32px;
+            img {
+              width: 360px;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          .content__img-wrap {
+            flex-shrink: 0;
+            order: 2;
+            margin-left: 32px;
+            img {
+              width: 360px;
+            }
+          }
+
+          dd {
+            text-align: right;
+          }
+        }
+      }
+
+      .content__txt {
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  /*<----------캐어유 홈페이지 careyou website---------->*/
+  /*<----------헤더 header---------->*/
+  .header.careyou {
+    overflow: hidden;
+
+    img {
+      max-width: initial;
+    }
+  }
+
+  .main.careyou {
+    /*<----------와이어프레임 wireframes---------->*/
+    .wireframes {
+      .content {
+        margin-bottom: 64px;
+      }
+
+      .content__img-wrap {
+        margin-bottom: 32px;
+      }
+    }
+
+    /*<----------스타일 가이드 style guide---------->*/
+    .style-guide {
+      .color-theme {
+        padding: 16px 0;
+
+        .theme {
+          & + .theme {
+            margin-left: 32px;
+          }
+        }
+      }
+
+      .color-theme__title {
+        @include fontBody($size: 1.6rem);
+      }
+
+      .color__sample {
+        width: 72px;
+        height: 72px;
+      }
+
+      .color__code {
+        @include fontBody($size: 1.4rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+      }
+
+      .font-wrap {
+        padding: 48px 16px;
+      }
+
+      .icon-group {
+        img {
+          width: 72px;
+
+          & + img {
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  /*<----------평촌도서관 pyeongchon library---------->*/
+  .main.library {
+    /*<----------메인 공통 main common---------->*/
+    .hidden-on-pc {
+      display: none;
+    }
+
+    .visible-on-pc {
+      display: block;
+    }
+
+    /*<----------와이어프레임 및 기능 소개 wireframe & features---------->*/
+    .features {
+      .content {
+        margin-bottom: 64px;
+
+        &.notice .content__txt:first-of-type {
+          margin-bottom: 32px;
+        }
+      }
+
+      .content__img-wrap {
+        margin-bottom: 32px;
+      }
+    }
+
+    /*<----------스타일 가이드 style guide---------->*/
+    .style-guide {
+      .color-theme {
+        padding: 16px 16px;
+      }
+
+      .color__sample {
+        width: 72px;
+        height: 72px;
+      }
+
+      .color__code {
+        @include fontBody($size: 1.4rem, $weight: $fontWeightL, $color: $colorTxtGR1);
+      }
+
+      .icon-wrap {
+        padding: 16px 0;
+      }
+
+      .icon-list {
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+        gap: 0;
+
+        li {
+          width: 72px;
+
+          & + li {
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  /*<----------Momentum 클론 Momentum clone---------->*/
+  .main.momentum {
+    /*<----------기능 features---------->*/
+    .features {
+      .content {
+        margin-bottom: 64px;
+      }
+
+      .content__img-wrap {
+        margin: 0 auto 32px;
+      }
+    }
+
+    /*<----------최종 디자인 final design---------->*/
+    .final-design {
+      .content {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
