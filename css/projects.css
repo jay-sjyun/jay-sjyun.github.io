@@ -792,6 +792,16 @@ body {
 }
 
 /*<----------Momentum 클론 Momentum clone---------->*/
+/*<----------헤더 header---------->*/
+.header.momentum {
+  display: flex;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+.header.momentum .img-wrap {
+  max-width: 1024px;
+}
+
 .main.momentum {
   /*<----------메인 공통 main common---------->*/
   /*<----------기능 features---------->*/
