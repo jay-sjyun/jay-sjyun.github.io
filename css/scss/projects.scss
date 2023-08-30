@@ -492,6 +492,13 @@ body {
 }
 
 /*<----------평촌도서관 pyeongchon library---------->*/
+/*<----------헤더 header---------->*/
+.header.library {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background: #00112e;
+}
 .main.library {
   /*<----------메인 공통 main common---------->*/
   .project-link {
@@ -1100,6 +1107,19 @@ body {
   }
 
   /*<----------평촌도서관 pyeongchon library---------->*/
+  /*<----------헤더 header---------->*/
+  .header.library {
+    overflow: hidden;
+
+    .img-wrap {
+      max-width: 800px;
+    }
+
+    img {
+      max-width: initial;
+    }
+  }
+
   .main.library {
     /*<----------메인 공통 main common---------->*/
     .hidden-on-pc {
