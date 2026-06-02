@@ -1,0 +1,297 @@
+@import "common.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+
+.project.bnsr {
+  .header {
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--clr-bnsr-on-sec-cnt) 50%, #00322a);
+  }
+
+  .header_wrap {
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 48px;
+
+    ::before {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      width: 524px;
+      height: 559px;
+      background-image: url(../images/bnsr/hero_visual_mobile.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: "";
+      transform: translateX(-46%) rotate(-30deg);
+    }
+  }
+
+  .project__title {
+    color: var(--clr-bnsr-on-sec);
+
+    .highlight {
+      color: var(--clr-bnsr-sec);
+    }
+  }
+
+  .overview {
+    .item_list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  .project_bg {
+    background-color: var(--clr-surf-cnt-low);
+  }
+
+  .problem_definition {
+    .item_list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  .goals {
+    background-color: var(--clr-bnsr-pri-cnt);
+
+    .para_list--num {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 16px;
+      list-style-type: decimal;
+      list-style-position: outside;
+
+      .para {
+        @include fontBody;
+      }
+    }
+  }
+
+  .design_process {
+    .item_list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    .item__para {
+      margin-bottom: 40px;
+
+      &.design_sys {
+        margin-bottom: 48px;
+      }
+    }
+
+    .fig_group {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      &.sitemap .img_wrap {
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      &.wireframe .img_wrap {
+        overflow: hidden;
+        border-radius: 8px;
+      }
+    }
+
+    .font_list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        line-height: 1.25;
+      }
+
+      .fontface {
+        @include fontHeadline;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+      }
+
+      .font_head {
+        @include fontHeadline(var(--clr-on-surf-var));
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+      }
+
+      .font_ttl {
+        @include fontBody;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      .font_label {
+        @include fontBody;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .font_body {
+        @include fontBody;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 18px;
+      }
+    }
+
+    .clr_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 16px;
+
+      .img_wrap {
+        align-self: flex-start;
+        width: calc(50% - 8px);
+      }
+    }
+  }
+
+  .final_design {
+    padding-top: 32px;
+
+    .sec_wrap {
+      gap: var(--gap-v-l);
+    }
+
+    .sec__ttl_wrap {
+      .para {
+        .highlight {
+          color: var(--clr-err);
+        }
+      }
+    }
+
+    .item_list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-v-l);
+    }
+
+    .item__para {
+      margin-bottom: 32px;
+    }
+
+    .img_wrap {
+      display: block;
+    }
+  }
+
+  .reflection {
+    background-color: var(--clr-bnsr-sec-cnt);
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑 Desktop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+
+@media only screen and (min-width: 896px) {
+  .project.bnsr {
+    .header_wrap {
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      ::before {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: -20px;
+        width: 524px;
+        height: 449px;
+        background-image: url(../images/bnsr/hero_visual_desktop.png);
+        transform: translateY(-50%) translateX(0) rotate(-30deg);
+      }
+    }
+
+    .overview {
+      .item_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+
+        .item {
+          width: calc(50% - 12px);
+
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .design_process {
+      .item_list {
+        gap: 100px;
+      }
+
+      .fig_group {
+        gap: var(--gap-v-l);
+
+        &.design_sys {
+          margin-top: var(--gap-v-l);
+        }
+      }
+
+      .clr_list {
+        gap: 24px 24px;
+
+        .img_wrap {
+          width: calc(33.33% - 16px);
+        }
+      }
+    }
+
+    .final_design {
+      .sec_wrap {
+        align-items: center;
+        max-width: 1200px;
+      }
+
+      .sec__ttl_wrap {
+        max-width: 800px;
+      }
+
+      .item_list {
+        gap: 100px;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .item__ttl {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .item__para {
+        width: 100%;
+        max-width: 800px;
+      }
+    }
+  }
+}

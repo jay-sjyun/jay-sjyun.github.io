@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+:root {
+  /*<---------- MyHanis 색상 ---------->*/
+  --clr-hanis-pri: #162d55;
+  --clr-hanis-sec: #4375c2;
+  --clr-hanis-sec-cnt: #e4efff;
+  --clr-hanis-sec-cnt-bri: #f3f7ff;
+  --clr-hanis-ter-cnt: #e6f3f5;
+  --clr-hanis-on-ter-cnt: #00454d;
+  --clr-hanis-err-cnt: #ffeaed;
+
+  /*<---------- Renewable 색상 ---------->*/
+  --clr-renew-pri: #1462df;
+  --clr-renew-on-pri: #ffffff;
+  --clr-renew-pri-cnt: #dbe9ff;
+  --clr-renew-on-pri-cnt: #082657;
+  --clr-renew-sec: #009896;
+  --clr-renew-on-sec: #ffffff;
+  --clr-renew-sec-cnt: #d8ebea;
+  --clr-renew-on-sec-cnt: #004747;
+  --clr-renew-ter: #aade14;
+  --clr-renew-on-ter: #0b1215;
+
+  /*<---------- Renewable 색상 ---------->*/
+  --clr-bnsr-pri: #0f64c0;
+  --clr-bnsr-on-pri: #ffffff;
+  --clr-bnsr-pri-cnt: #edf5fb;
+  --clr-bnsr-on-pri-cnt: #18317c;
+  --clr-bnsr-sec: #00786a;
+  --clr-bnsr-on-sec: #ffffff;
+  --clr-bnsr-sec-cnt: #edf5f6;
+  --clr-bnsr-on-sec-cnt: #00382f;
+
+  /*<---------- 공통 색상 ---------->*/
+  --clr-err: #e8001f;
+
+  --clr-surf-cnt-lowest: #ffffff;
+  --clr-surf-cnt-low: #f6f6f9;
+  --clr-surf-cnt: #efeff2;
+
+  --clr-on-surf: #141414;
+  --clr-on-surf-var: #2b2b2b;
+  --clr-on-surf-var-bright: #666666;
+
+  --clr-out-var: #d9d9d9;
+
+  --clr-shd: #002d7a;
+
+  /*<---------- 간격 ---------->*/
+  --gap-v-s: 32px;
+  --gap-v-m: 48px;
+  --gap-v-l: 64px;
+}
+
+/*<---------- 색상값 ---------->*/
+$colorHanisOnPrimary: #ffffff;
+$colorHanisTertiaryContainerBright: #eef7f9;
+$colorHanisTertiaryContainer: #e6f3f5;
+$colorHanisOnTertiaryContainer: #00454d;
+$colorHanisOnErrorContainer: #c72c41;
+
+$colorError: #e8001f;
+
+$colorSurfaceContainerLowest: #ffffff;
+$colorSurfaceContainerLow: #f6f6f9;
+$colorSurfaceContainer: #efeff2;
+
+$colorOnSurface: #141414;
+$colorOnSurfaceVariant: #2b2b2b;
+$colorOnSurfaceVariantBright: #666666;
+
+$colorOutlineVariant: #d9d9d9;
+
+$colorShadow: #002d7a;
+
+/*<---------- 폰트 mixin ---------->*/
+@mixin fontHeadline($color: var(--clr-on-surf)) {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.33;
+  letter-spacing: -0.075rem;
+  color: $color;
+
+  @media only screen and (min-width: 896px) {
+    font-size: 3.2rem;
+  }
+}
+
+@mixin fontTitle($color: var(--clr-on-surf)) {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $color;
+
+  @media only screen and (min-width: 896px) {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin fontBody($color: var(--clr-on-surf-var)) {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color;
+  word-break: keep-all;
+
+  @media only screen and (min-width: 896px) {
+    font-size: 1.6rem;
+  }
+}
+
+/*<---------- 공통 ---------->*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-surf-cnt-lowest);
+  color: var(--clr-on-surf-var);
+}
+
+.header {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media only screen and (min-width: 896px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.header_wrap {
+  max-width: 480px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 896px) {
+    max-width: 800px;
+  }
+}
+
+.project__title {
+  @include fontHeadline();
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.section {
+  padding: 64px 16px;
+
+  @media only screen and (min-width: 896px) {
+    padding: 100px 48px;
+  }
+}
+
+.sec_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-v-s);
+  max-width: 480px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 896px) {
+    max-width: 800px;
+  }
+}
+
+.sec__ttl {
+  @include fontHeadline();
+  text-transform: uppercase;
+}
+
+.sec__ttl_wrap {
+  .sec__ttl {
+    margin-bottom: 32px;
+  }
+
+  .para {
+    @include fontBody();
+  }
+}
+
+.item {
+  .item__ttl {
+    @include fontTitle();
+    margin-bottom: 4px;
+  }
+
+  .item__para {
+    @include fontBody();
+  }
+
+  .img_wrap.elevated {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba($color: $colorShadow, $alpha: 0.15);
+  }
+}
+
+.para_list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .para {
+    @include fontBody();
+    position: relative;
+    padding-left: 19px;
+
+    &::before {
+      position: absolute;
+      top: calc(0.7rem + 1px);
+      left: 8px;
+      width: 3px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: var(--clr-on-surf-var);
+      content: "";
+
+      @media only screen and (min-width: 896px) {
+        top: calc(0.8rem + 1px);
+      }
+    }
+  }
+}
+
+.para_group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .para {
+    @include fontBody();
+  }
+}
+
+.fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .fig__cap {
+    margin-bottom: 16px;
+  }
+
+  .anno_list {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+
+    .anno {
+      position: relative;
+      align-self: flex-start;
+      @include fontBody(var(--clr-on-surf-var-bright));
+      padding-left: 24px;
+
+      &::before {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        content: "";
+      }
+    }
+
+    @media only screen and (min-width: 896px) {
+      flex-direction: row;
+      gap: 16px;
+    }
+  }
+}
+
+.fig__cap {
+  @include fontBody(var(--clr-on-surf-var-bright));
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--clr-on-surf);
+  padding: 48px 16px;
+
+  .copyright {
+    max-width: 480px;
+    margin: 0 auto;
+    @include fontBody(var(--clr-out-var));
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 896px) {
+    padding: 48px 48px;
+
+    .copyright {
+      max-width: 800px;
+    }
+  }
+}

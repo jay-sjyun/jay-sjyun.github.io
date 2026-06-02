@@ -1,0 +1,242 @@
+@import "common.scss";
+
+@mixin infoChip() {
+  display: block;
+  padding: 6px 8px;
+  border: 1px solid var(--clr-out-var);
+  @include fontBody(var(--clr-on-surf-var-bright));
+  font-size: 1.4rem;
+  border-radius: 8px;
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+
+body.index {
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-surf-cnt-lowest);
+    border-bottom: 1px solid var(--clr-out-var);
+  }
+
+  .nav {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .nav__menu_list {
+    display: flex;
+    justify-content: flex-end;
+
+    .nav__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      padding: 0 16px;
+      @include fontTitle(var(--clr-on-surf));
+      transition: all 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: var(--clr-renew-pri);
+      }
+    }
+  }
+
+  .sec_wrap {
+    max-width: 408px;
+  }
+
+  .intro {
+    padding-top: 128px;
+
+    .txt_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .self_info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .name {
+      @include fontTitle;
+      word-break: keep-all;
+    }
+
+    .job_ttl {
+      @include fontBody;
+      word-break: keep-all;
+    }
+
+    .intro_para {
+      @include fontHeadline(--clr-on-surf-var);
+      word-break: keep-all;
+
+      .linebreak {
+        display: none;
+      }
+
+      .highlight {
+        color: var(--clr-renew-pri);
+      }
+    }
+
+    .sidenote {
+      @include fontBody(var(--clr-on-surf-var-bright));
+      word-break: keep-all;
+      font-size: 1.4rem;
+    }
+  }
+
+  .work {
+    .item_list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    .item {
+      .item__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .img_wrap {
+        overflow: hidden;
+        border-radius: 16px;
+      }
+
+      .txt_wrap {
+        width: 100%;
+      }
+
+      .chip_group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+
+        .chip {
+          @include infoChip();
+        }
+      }
+    }
+  }
+
+  .skills {
+    padding-top: 32px;
+
+    .para_group {
+      gap: 4px;
+    }
+  }
+
+  .contact {
+    padding-top: 32px;
+    padding-bottom: 128px;
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑 Desktop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 896px) {
+  body.index {
+    .nav {
+      max-width: 896px;
+    }
+
+    .nav__menu_list {
+      padding: 0 16px;
+
+      .nav__link {
+        padding: 0 32px;
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0;
+      max-width: 896px;
+      margin: 0 auto;
+    }
+
+    .sec_wrap {
+      max-width: 800px;
+    }
+
+    .intro {
+      width: 100%;
+      padding-top: 160px;
+
+      .intro_para .linebreak {
+        display: block;
+      }
+    }
+
+    .work {
+      width: 100%;
+      padding-top: 100px;
+
+      .item_list {
+        gap: 32px;
+      }
+
+      .item {
+        .item__link {
+          flex-direction: row;
+          align-items: center;
+          gap: 48px;
+        }
+
+        .img_wrap {
+          width: 100%;
+        }
+
+        &:nth-of-type(even) {
+          .item__link {
+            flex-direction: row-reverse;
+
+            .item__ttl,
+            .item__para {
+              text-align: right;
+            }
+
+            .chip_group {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+
+    .skills {
+      width: 50%;
+      padding-top: 50px;
+      padding-right: 24px;
+      padding-bottom: 160px;
+    }
+
+    .contact {
+      width: 50%;
+      padding-top: 50px;
+      padding-left: 24px;
+      padding-bottom: 160px;
+    }
+  }
+}

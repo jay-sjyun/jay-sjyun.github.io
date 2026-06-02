@@ -1,0 +1,884 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+:root {
+  /*<---------- MyHanis 색상 ---------->*/
+  --clr-hanis-pri: #162d55;
+  --clr-hanis-sec: #4375c2;
+  --clr-hanis-sec-cnt: #e4efff;
+  --clr-hanis-sec-cnt-bri: #f3f7ff;
+  --clr-hanis-ter-cnt: #e6f3f5;
+  --clr-hanis-on-ter-cnt: #00454d;
+  --clr-hanis-err-cnt: #ffeaed;
+  /*<---------- Renewable 색상 ---------->*/
+  --clr-renew-pri: #1462df;
+  --clr-renew-on-pri: #ffffff;
+  --clr-renew-pri-cnt: #dbe9ff;
+  --clr-renew-on-pri-cnt: #082657;
+  --clr-renew-sec: #009896;
+  --clr-renew-on-sec: #ffffff;
+  --clr-renew-sec-cnt: #d8ebea;
+  --clr-renew-on-sec-cnt: #004747;
+  --clr-renew-ter: #aade14;
+  --clr-renew-on-ter: #0b1215;
+  /*<---------- Renewable 색상 ---------->*/
+  --clr-bnsr-pri: #0f64c0;
+  --clr-bnsr-on-pri: #ffffff;
+  --clr-bnsr-pri-cnt: #edf5fb;
+  --clr-bnsr-on-pri-cnt: #18317c;
+  --clr-bnsr-sec: #00786a;
+  --clr-bnsr-on-sec: #ffffff;
+  --clr-bnsr-sec-cnt: #edf5f6;
+  --clr-bnsr-on-sec-cnt: #00382f;
+  /*<---------- 공통 색상 ---------->*/
+  --clr-err: #e8001f;
+  --clr-surf-cnt-lowest: #ffffff;
+  --clr-surf-cnt-low: #f6f6f9;
+  --clr-surf-cnt: #efeff2;
+  --clr-on-surf: #141414;
+  --clr-on-surf-var: #2b2b2b;
+  --clr-on-surf-var-bright: #666666;
+  --clr-out-var: #d9d9d9;
+  --clr-shd: #002d7a;
+  /*<---------- 간격 ---------->*/
+  --gap-v-s: 32px;
+  --gap-v-m: 48px;
+  --gap-v-l: 64px;
+}
+
+/*<---------- 색상값 ---------->*/
+/*<---------- 폰트 mixin ---------->*/
+/*<---------- 공통 ---------->*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-surf-cnt-lowest);
+  color: var(--clr-on-surf-var);
+}
+
+.header {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media only screen and (min-width: 896px) {
+  .header {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.header_wrap {
+  max-width: 480px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 896px) {
+  .header_wrap {
+    max-width: 800px;
+  }
+}
+
+.project__title {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.33;
+  letter-spacing: -0.075rem;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .project__title {
+    font-size: 3.2rem;
+  }
+}
+.project__title {
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.section {
+  padding: 64px 16px;
+}
+@media only screen and (min-width: 896px) {
+  .section {
+    padding: 100px 48px;
+  }
+}
+
+.sec_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-v-s);
+  max-width: 480px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 896px) {
+  .sec_wrap {
+    max-width: 800px;
+  }
+}
+
+.sec__ttl {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.33;
+  letter-spacing: -0.075rem;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .sec__ttl {
+    font-size: 3.2rem;
+  }
+}
+.sec__ttl {
+  text-transform: uppercase;
+}
+
+.sec__ttl_wrap .sec__ttl {
+  margin-bottom: 32px;
+}
+.sec__ttl_wrap .para {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .sec__ttl_wrap .para {
+    font-size: 1.6rem;
+  }
+}
+
+.item .item__ttl {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .item .item__ttl {
+    font-size: 1.6rem;
+  }
+}
+.item .item__ttl {
+  margin-bottom: 4px;
+}
+.item .item__para {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .item .item__para {
+    font-size: 1.6rem;
+  }
+}
+.item .img_wrap.elevated {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.15);
+}
+
+.para_list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.para_list .para {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .para_list .para {
+    font-size: 1.6rem;
+  }
+}
+.para_list .para {
+  position: relative;
+  padding-left: 19px;
+}
+.para_list .para::before {
+  position: absolute;
+  top: calc(0.7rem + 1px);
+  left: 8px;
+  width: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--clr-on-surf-var);
+  content: "";
+}
+@media only screen and (min-width: 896px) {
+  .para_list .para::before {
+    top: calc(0.8rem + 1px);
+  }
+}
+
+.para_group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.para_group .para {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .para_group .para {
+    font-size: 1.6rem;
+  }
+}
+
+.fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fig .fig__cap {
+  margin-bottom: 16px;
+}
+.fig .anno_list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.fig .anno_list .anno {
+  position: relative;
+  align-self: flex-start;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var-bright);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .fig .anno_list .anno {
+    font-size: 1.6rem;
+  }
+}
+.fig .anno_list .anno {
+  padding-left: 24px;
+}
+.fig .anno_list .anno::before {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  content: "";
+}
+@media only screen and (min-width: 896px) {
+  .fig .anno_list {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.fig__cap {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var-bright);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .fig__cap {
+    font-size: 1.6rem;
+  }
+}
+.fig__cap {
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--clr-on-surf);
+  padding: 48px 16px;
+}
+.footer .copyright {
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-out-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .footer .copyright {
+    font-size: 1.6rem;
+  }
+}
+.footer .copyright {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media only screen and (min-width: 896px) {
+  .footer {
+    padding: 48px 48px;
+  }
+  .footer .copyright {
+    max-width: 800px;
+  }
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  모바일 Mobile
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+.project.myhanis .header {
+  overflow: hidden;
+  background-color: var(--clr-hanis-sec-cnt);
+}
+.project.myhanis .header_wrap {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 300px;
+}
+.project.myhanis .header_wrap ::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  background-image: url(../images/myhanis/hero_visual.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  transform: translateX(-50%);
+}
+.project.myhanis .project__title {
+  color: var(--clr-hanis-sec);
+}
+.project.myhanis .project__title .highlight {
+  color: var(--clr-hanis-pri);
+}
+.project.myhanis .overview .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.project.myhanis .project_bg {
+  background-color: var(--clr-surf-cnt-low);
+}
+.project.myhanis .problem_def .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.project.myhanis .project_goals {
+  background-color: var(--clr-hanis-sec-cnt);
+}
+.project.myhanis .project_goals .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.project.myhanis .research .sec_wrap {
+  gap: var(--gap-v-m);
+}
+.project.myhanis .research .sec__ttl_wrap + .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-v-l);
+}
+.project.myhanis .research .fig {
+  margin-top: 40px;
+}
+.project.myhanis .research .fig.inquiry_chart .img_wrap {
+  max-width: 360px;
+}
+.project.myhanis .research .fig.inquiry_chart .anno_list {
+  padding-top: 16px;
+}
+.project.myhanis .research .fig.inquiry_chart .anno_list .anno:first-of-type::before {
+  background-color: var(--clr-hanis-sec);
+}
+.project.myhanis .research .fig.inquiry_chart .anno_list .anno:nth-of-type(2)::before {
+  background-color: var(--clr-surf-cnt);
+}
+.project.myhanis .research .voc_type .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+.project.myhanis .research .voc_list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 32px auto 48px;
+}
+.project.myhanis .research .voc_list .voc {
+  position: relative;
+  padding: 28px 24px;
+  border-radius: 16px;
+}
+.project.myhanis .research .voc_list .voc::after {
+  position: absolute;
+  top: calc(100% - 20px);
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+  background-position: center;
+  content: "";
+}
+.project.myhanis .research .voc_list .voc:first-of-type {
+  background-color: var(--clr-hanis-sec-cnt);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-hanis-pri);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .research .voc_list .voc:first-of-type {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .research .voc_list .voc:first-of-type::after {
+  left: 32px;
+  background-image: url(../images/myhanis/bubble_tail_left.png);
+}
+.project.myhanis .research .voc_list .voc:last-of-type {
+  background-color: var(--clr-hanis-ter-cnt);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-hanis-on-ter-cnt);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .research .voc_list .voc:last-of-type {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .research .voc_list .voc:last-of-type::after {
+  right: 32px;
+  background-image: url(../images/myhanis/bubble_tail_right.png);
+}
+.project.myhanis .ux_strategy {
+  background-color: var(--clr-hanis-ter-cnt);
+}
+.project.myhanis .ux_strategy .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.project.myhanis .design_process .item_list.depth1 {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.project.myhanis .design_process h3.item__ttl {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process h3.item__ttl {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process h3.item__ttl {
+  margin-bottom: 16px;
+}
+.project.myhanis .design_process .item_list.depth2 {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.project.myhanis .design_process .fig {
+  margin-top: 40px;
+}
+.project.myhanis .design_process .ia_diagram .anno_list {
+  padding-top: 8px;
+}
+.project.myhanis .design_process .ia_diagram .anno:first-of-type::before {
+  background-color: var(--clr-surf-cnt-low);
+}
+.project.myhanis .design_process .ia_diagram .anno:nth-of-type(2)::before {
+  background-color: var(--clr-hanis-sec-cnt);
+}
+.project.myhanis .design_process .ia_diagram .anno:last-of-type::before {
+  background-color: var(--clr-hanis-err-cnt);
+}
+.project.myhanis .design_process .fig_group.wireframe {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+}
+.project.myhanis .design_process .fig_group.wireframe .fig {
+  margin-top: 0;
+}
+.project.myhanis .design_process .fig_group.wireframe .img_wrap {
+  overflow: hidden;
+  max-width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.15);
+}
+.project.myhanis .design_process .search_opt .para_list--num {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  padding-left: 16px;
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.project.myhanis .design_process .search_opt .para_list--num .para {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .search_opt .para_list--num .para {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .search_opt .para_list--num .para .para__ttl {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .search_opt .para_list--num .para .para__ttl {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.ctg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project.myhanis .design_process .fig_group.ctg .fig:first-of-type .img_wrap {
+  max-width: min(100%, 297px);
+}
+.project.myhanis .design_process .fig_group.ctg .fig:last-of-type .img_wrap {
+  max-width: min(100%, 381px);
+}
+.project.myhanis .design_process .fig_group.design_sys {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 40px;
+}
+.project.myhanis .design_process .fig_group.design_sys .fig {
+  margin-top: 0;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.typeface {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.typeface {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.typeface {
+  font-size: 32px;
+  line-height: 1.25;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.headline {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: colorOnSurfaceVariant;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.headline {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.headline {
+  font-size: 28px;
+  line-height: 1.25;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.title {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: colorOnSurfaceVariant;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.title {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.title {
+  font-size: 22px;
+  line-height: 1.25;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.label {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.label {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  .project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.body {
+    font-size: 1.6rem;
+  }
+}
+.project.myhanis .design_process .fig_group.design_sys .font_sample_list .font_sample.body {
+  font-size: 14px;
+  line-height: 1.25;
+}
+.project.myhanis .design_process .fig_group.design_sys .color_group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+}
+.project.myhanis .design_process .fig_group.design_sys .color_group .img_wrap {
+  overflow: hidden;
+  align-self: flex-start;
+  width: calc(50% - 8px);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.15);
+}
+.project.myhanis .final_design {
+  background-color: var(--clr-hanis-sec-cnt-bri);
+}
+.project.myhanis .final_design .sec_wrap {
+  gap: 48px;
+}
+.project.myhanis .final_design .sec__ttl_wrap .para .bullet {
+  color: var(--clr-err);
+}
+.project.myhanis .final_design .swiper {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+.project.myhanis .final_design .swiper-horizontal {
+  position: relative;
+}
+.project.myhanis .final_design .swiper-horizontal .swiper-button-next,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  background-color: rgba(20, 20, 20, 0.66);
+}
+.project.myhanis .final_design .swiper-horizontal .swiper-button-next img,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev img,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next img,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev img {
+  opacity: 0.75;
+  transition: opacity 0.25s ease-in-out;
+}
+.project.myhanis .final_design .swiper-horizontal .swiper-button-next img:hover, .project.myhanis .final_design .swiper-horizontal .swiper-button-next img:focus,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev img:hover,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev img:focus,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next img:hover,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next img:focus,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev img:hover,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev img:focus {
+  opacity: 1;
+}
+.project.myhanis .final_design .swiper-horizontal .swiper-button-next .swiper-navigation-icon,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev .swiper-navigation-icon,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next .swiper-navigation-icon,
+.project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev .swiper-navigation-icon {
+  display: none;
+}
+.project.myhanis .final_design .swiper-horizontal.swiper-rtl .swiper-button-next, .project.myhanis .final_design .swiper-horizontal.swiper-rtl ~ .swiper-button-next, .project.myhanis .final_design .swiper-horizontal ~ .swiper-button-prev,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-prev {
+  position: absolute;
+  left: auto;
+  right: 64px;
+  border-radius: 48px 0 0 48px;
+}
+.project.myhanis .final_design .swiper-horizontal.swiper-rtl .swiper-button-prev, .project.myhanis .final_design .swiper-horizontal.swiper-rtl ~ .swiper-button-prev, .project.myhanis .final_design .swiper-horizontal ~ .swiper-button-next,
+.project.myhanis .final_design .swiper-horizontal .swiper-button-next {
+  position: absolute;
+  right: 16px;
+  border-radius: 0 48px 48px 0;
+}
+.project.myhanis .final_design .item_list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-v-l);
+}
+.project.myhanis .final_design .fig_group {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+}
+.project.myhanis .final_design .img_wrap {
+  overflow: hidden;
+  max-width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.15);
+}
+
+/*==============================================
+|||||||||||||||||||||||||||||||||||||||||||||||||
+  데스크탑 Desktop
+|||||||||||||||||||||||||||||||||||||||||||||||||
+================================================*/
+@media only screen and (min-width: 896px) {
+  .project.myhanis .header_wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .project.myhanis .header_wrap ::before {
+    bottom: -24px;
+    left: auto;
+    right: 72px;
+    width: 320px;
+    height: 320px;
+    transform: translateX(0);
+  }
+  .project.myhanis .overview .item_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px 24px;
+  }
+  .project.myhanis .overview .item {
+    width: calc(50% - 12px);
+  }
+  .project.myhanis .overview .item:first-of-type {
+    width: 100%;
+  }
+  .project.myhanis .research .sec__ttl_wrap + .item_list {
+    gap: 100px;
+  }
+  .project.myhanis .research .voc_list {
+    padding: 0 64px;
+  }
+  .project.myhanis .research .voc_list .voc {
+    padding: 28px 48px;
+    text-align: center;
+  }
+  .project.myhanis .design_process .item_list.depth1,
+  .project.myhanis .design_process .item_list.depth2 {
+    gap: 100px;
+  }
+  .project.myhanis .design_process .ia_diagram .img_wrap {
+    max-width: 584px;
+  }
+  .project.myhanis .design_process .order_detail .img_wrap {
+    max-width: 736px;
+  }
+  .project.myhanis .design_process .fig_group.wireframe {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 64px 24px;
+  }
+  .project.myhanis .design_process .fig_group.wireframe .fig {
+    max-width: 360px;
+  }
+  .project.myhanis .design_process .search_opt .para_list--num {
+    margin-top: 40px;
+  }
+  .project.myhanis .design_process .search_opt .fig_group.ctg {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .project.myhanis .design_process .search_opt .fig_group.ctg .fig {
+    width: calc(50% - 12px);
+  }
+  .project.myhanis .design_process .fig_group.design_sys {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+  .project.myhanis .design_process .fig_group.design_sys .fig.typography {
+    width: 100%;
+  }
+  .project.myhanis .design_process .fig_group.design_sys .color_group {
+    justify-content: center;
+    gap: 24px;
+  }
+  .project.myhanis .design_process .fig_group.design_sys .color_group .img_wrap {
+    width: calc(33.3% - 16px);
+  }
+  .project.myhanis .design_process .fig_group.design_sys .fig.buttons,
+  .project.myhanis .design_process .fig_group.design_sys .fig.textfields {
+    width: calc(50% - 12px);
+  }
+  .project.myhanis .final_design .item_list {
+    gap: 100px;
+  }
+  .project.myhanis .final_design .fig_group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 64px 24px;
+  }
+}
