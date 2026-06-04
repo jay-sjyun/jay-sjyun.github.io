@@ -115,6 +115,11 @@ body.index {
       .img_wrap {
         overflow: hidden;
         border-radius: 16px;
+        transition: box-shadow 0.2s ease-in-out;
+
+        img {
+          transition: all 0.2s ease-in-out;
+        }
       }
 
       .txt_wrap {
@@ -202,6 +207,15 @@ body.index {
           flex-direction: row;
           align-items: center;
           gap: 48px;
+
+          &:hover .img_wrap,
+          &:focus .img_wrap {
+            box-shadow: 0 0 10px rgba($color: $colorShadow, $alpha: 0.15);
+
+            img {
+              transform: scale(1.1);
+            }
+          }
         }
 
         .img_wrap {

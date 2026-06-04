@@ -332,7 +332,6 @@ body {
 .footer .copyright {
   font-weight: 300;
   font-size: 1.4rem;
-  text-align: center;
 }
 @media only screen and (min-width: 896px) {
   .footer {
@@ -485,6 +484,10 @@ body.index .work .item .item__link {
 body.index .work .item .img_wrap {
   overflow: hidden;
   border-radius: 16px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+body.index .work .item .img_wrap img {
+  transition: all 0.2s ease-in-out;
 }
 body.index .work .item .txt_wrap {
   width: 100%;
@@ -570,6 +573,12 @@ body.index .contact {
     flex-direction: row;
     align-items: center;
     gap: 48px;
+  }
+  body.index .work .item .item__link:hover .img_wrap, body.index .work .item .item__link:focus .img_wrap {
+    box-shadow: 0 0 10px rgba(0, 45, 122, 0.15);
+  }
+  body.index .work .item .item__link:hover .img_wrap img, body.index .work .item .item__link:focus .img_wrap img {
+    transform: scale(1.1);
   }
   body.index .work .item .img_wrap {
     width: 100%;
