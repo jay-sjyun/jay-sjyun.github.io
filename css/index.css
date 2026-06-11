@@ -393,12 +393,12 @@ body.index .intro {
 body.index .intro .txt_wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 body.index .intro .self_info {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 8px;
 }
 body.index .intro .name {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -414,6 +414,7 @@ body.index .intro .name {
 }
 body.index .intro .name {
   word-break: keep-all;
+  font-size: 2.1rem;
 }
 body.index .intro .job_ttl {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -430,8 +431,10 @@ body.index .intro .job_ttl {
 }
 body.index .intro .job_ttl {
   word-break: keep-all;
+  font-size: 2.1rem;
 }
 body.index .intro .intro_para {
+  margin-bottom: 32px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 2.8rem;
   font-weight: 900;
@@ -475,7 +478,7 @@ body.index .work .item_list {
   flex-direction: column;
   gap: 64px;
 }
-body.index .work .item .item__link {
+body.index .work .item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -496,12 +499,12 @@ body.index .work .item .chip_group {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 body.index .work .item .chip_group .chip {
   display: block;
   padding: 6px 8px;
-  border: 1px solid var(--clr-out-var);
+  background-color: #f9f9f9;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -517,6 +520,38 @@ body.index .work .item .chip_group .chip {
 body.index .work .item .chip_group .chip {
   font-size: 1.4rem;
   border-radius: 8px;
+}
+body.index .work .item .item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-top: 16px;
+  padding: 8px 12px 8px 16px;
+  border: 1px solid var(--clr-out-var);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+body.index .work .item .item__link .link__txt {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-on-surf-var);
+  word-break: keep-all;
+}
+@media only screen and (min-width: 896px) {
+  body.index .work .item .item__link .link__txt {
+    font-size: 1.6rem;
+  }
+}
+body.index .work .item .item__link .link__icon path {
+  fill: var(--clr-on-surf-var);
+}
+body.index .work .item .item__link:hover, body.index .work .item .item__link:focus {
+  border-color: var(--clr-on-surf-var);
 }
 body.index .skills {
   padding-top: 32px;
@@ -559,6 +594,12 @@ body.index .contact {
     width: 100%;
     padding-top: 160px;
   }
+  body.index .intro .name {
+    font-size: 2.4rem;
+  }
+  body.index .intro .job_ttl {
+    font-size: 2.4rem;
+  }
   body.index .intro .intro_para .linebreak {
     display: block;
   }
@@ -569,29 +610,30 @@ body.index .contact {
   body.index .work .item_list {
     gap: 32px;
   }
-  body.index .work .item .item__link {
+  body.index .work .item {
     flex-direction: row;
     align-items: center;
     gap: 48px;
   }
-  body.index .work .item .item__link:hover .img_wrap, body.index .work .item .item__link:focus .img_wrap {
-    box-shadow: 0 0 10px rgba(0, 45, 122, 0.15);
+  body.index .work .item:nth-of-type(even) {
+    flex-direction: row-reverse;
   }
-  body.index .work .item .item__link:hover .img_wrap img, body.index .work .item .item__link:focus .img_wrap img {
-    transform: scale(1.1);
+  body.index .work .item:nth-of-type(even) .item__ttl,
+  body.index .work .item:nth-of-type(even) .item__para {
+    text-align: right;
+  }
+  body.index .work .item:nth-of-type(even) .chip_group {
+    justify-content: flex-end;
+  }
+  body.index .work .item:nth-of-type(even) .item__link {
+    justify-self: flex-end;
   }
   body.index .work .item .img_wrap {
     width: 100%;
   }
-  body.index .work .item:nth-of-type(even) .item__link {
-    flex-direction: row-reverse;
-  }
-  body.index .work .item:nth-of-type(even) .item__link .item__ttl,
-  body.index .work .item:nth-of-type(even) .item__link .item__para {
-    text-align: right;
-  }
-  body.index .work .item:nth-of-type(even) .item__link .chip_group {
-    justify-content: flex-end;
+  body.index .work .item .item__link {
+    margin-top: 24px;
+    justify-self: flex-start;
   }
   body.index .skills {
     width: 50%;

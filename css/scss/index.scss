@@ -3,7 +3,7 @@
 @mixin infoChip() {
   display: block;
   padding: 6px 8px;
-  border: 1px solid var(--clr-out-var);
+  background-color: #f9f9f9;
   @include fontBody(var(--clr-on-surf-var-bright));
   font-size: 1.4rem;
   border-radius: 8px;
@@ -58,26 +58,29 @@ body.index {
     .txt_wrap {
       display: flex;
       flex-direction: column;
-      gap: 16px;
     }
 
     .self_info {
       display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 8px;
     }
 
     .name {
       @include fontTitle;
       word-break: keep-all;
+      font-size: 2.1rem;
     }
 
     .job_ttl {
       @include fontBody;
       word-break: keep-all;
+      font-size: 2.1rem;
     }
 
     .intro_para {
+      margin-bottom: 32px;
       @include fontHeadline(--clr-on-surf-var);
       word-break: keep-all;
 
@@ -105,12 +108,10 @@ body.index {
     }
 
     .item {
-      .item__link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
 
       .img_wrap {
         overflow: hidden;
@@ -130,10 +131,37 @@ body.index {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 16px;
+        margin-top: 8px;
 
         .chip {
           @include infoChip();
+        }
+      }
+
+      .item__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        min-height: 40px;
+        margin-top: 16px;
+        padding: 8px 12px 8px 16px;
+        border: 1px solid var(--clr-out-var);
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+
+        .link__txt {
+          @include fontBody;
+        }
+
+        .link__icon path {
+          fill: var(--clr-on-surf-var);
+        }
+
+        &:hover,
+        &:focus {
+          border-color: var(--clr-on-surf-var);
         }
       }
     }
@@ -189,6 +217,14 @@ body.index {
       width: 100%;
       padding-top: 160px;
 
+      .name {
+        font-size: 2.4rem;
+      }
+
+      .job_ttl {
+        font-size: 2.4rem;
+      }
+
       .intro_para .linebreak {
         display: block;
       }
@@ -203,18 +239,24 @@ body.index {
       }
 
       .item {
-        .item__link {
-          flex-direction: row;
-          align-items: center;
-          gap: 48px;
+        flex-direction: row;
+        align-items: center;
+        gap: 48px;
 
-          &:hover .img_wrap,
-          &:focus .img_wrap {
-            box-shadow: 0 0 10px rgba($color: $colorShadow, $alpha: 0.15);
+        &:nth-of-type(even) {
+          flex-direction: row-reverse;
 
-            img {
-              transform: scale(1.1);
-            }
+          .item__ttl,
+          .item__para {
+            text-align: right;
+          }
+
+          .chip_group {
+            justify-content: flex-end;
+          }
+
+          .item__link {
+            justify-self: flex-end;
           }
         }
 
@@ -222,19 +264,9 @@ body.index {
           width: 100%;
         }
 
-        &:nth-of-type(even) {
-          .item__link {
-            flex-direction: row-reverse;
-
-            .item__ttl,
-            .item__para {
-              text-align: right;
-            }
-
-            .chip_group {
-              justify-content: flex-end;
-            }
-          }
+        .item__link {
+          margin-top: 24px;
+          justify-self: flex-start;
         }
       }
     }
