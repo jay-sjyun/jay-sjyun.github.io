@@ -155,8 +155,12 @@ body.index {
           @include fontBody;
         }
 
-        .link__icon path {
-          fill: var(--clr-on-surf-var);
+        .link__icon {
+          padding-top: 1px;
+
+          path {
+            fill: var(--clr-on-surf-var);
+          }
         }
 
         &:hover,

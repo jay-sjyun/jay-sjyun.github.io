@@ -547,6 +547,9 @@ body.index .work .item .item__link .link__txt {
     font-size: 1.6rem;
   }
 }
+body.index .work .item .item__link .link__icon {
+  padding-top: 1px;
+}
 body.index .work .item .item__link .link__icon path {
   fill: var(--clr-on-surf-var);
 }
