@@ -60,23 +60,81 @@ body {
 }
 
 .header {
-  padding-left: 16px;
-  padding-right: 16px;
+  display: inline-block;
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  max-width: calc(100% - 32px);
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(255, 255, 255, 0.1), inset 0 0 20px 10px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent, rgba(255, 255, 255, 0.1));
 }
 @media only screen and (min-width: 896px) {
   .header {
-    padding-left: 48px;
-    padding-right: 48px;
+    top: 24px;
+    max-width: calc(100% - 96px);
   }
 }
 
-.header_wrap {
-  max-width: 480px;
-  margin: 0 auto;
+.nav {
+  display: inline-block;
+  padding: 8px;
+}
+
+.nav__menu_list {
+  display: inline-flex;
+  align-items: center;
+}
+.nav__menu_list .nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 100px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
 }
 @media only screen and (min-width: 896px) {
-  .header_wrap {
-    max-width: 800px;
+  .nav__menu_list .nav__link {
+    font-size: 1.6rem;
+  }
+}
+.nav__menu_list .nav__link {
+  transition: all 0.2s ease-in-out;
+}
+.nav__menu_list .nav__link:hover, .nav__menu_list .nav__link:focus {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+@media only screen and (min-width: 896px) {
+  .nav__menu_list .nav__link {
+    padding: 0 24px;
   }
 }
 
@@ -347,48 +405,11 @@ body {
   모바일 Mobile
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-body.index .header {
-  position: sticky;
-  top: 0;
-  background-color: var(--clr-surf-cnt-lowest);
-  border-bottom: 1px solid var(--clr-out-var);
-}
-body.index .nav {
-  max-width: 440px;
-  margin: 0 auto;
-}
-body.index .nav__menu_list {
-  display: flex;
-  justify-content: flex-end;
-}
-body.index .nav__menu_list .nav__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  padding: 0 16px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: var(--clr-on-surf);
-}
-@media only screen and (min-width: 896px) {
-  body.index .nav__menu_list .nav__link {
-    font-size: 1.6rem;
-  }
-}
-body.index .nav__menu_list .nav__link {
-  transition: all 0.2s ease-in-out;
-}
-body.index .nav__menu_list .nav__link:hover, body.index .nav__menu_list .nav__link:focus {
-  color: var(--clr-renew-pri);
-}
 body.index .sec_wrap {
   max-width: 408px;
 }
 body.index .intro {
-  padding-top: 128px;
+  padding-top: 160px;
 }
 body.index .intro .txt_wrap {
   display: flex;
@@ -525,16 +546,12 @@ body.index .work .item .item__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   min-height: 40px;
   margin-top: 16px;
-  padding: 8px 12px 8px 16px;
+  padding: 8px 24px;
   border: 1px solid var(--clr-out-var);
-  border-radius: 8px;
+  border-radius: 100px;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-}
-body.index .work .item .item__link .link__txt {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -543,18 +560,15 @@ body.index .work .item .item__link .link__txt {
   word-break: keep-all;
 }
 @media only screen and (min-width: 896px) {
-  body.index .work .item .item__link .link__txt {
+  body.index .work .item .item__link {
     font-size: 1.6rem;
   }
 }
-body.index .work .item .item__link .link__icon {
-  padding-top: 1px;
-}
-body.index .work .item .item__link .link__icon path {
-  fill: var(--clr-on-surf-var);
+body.index .work .item .item__link {
+  transition: all 0.2s ease-out;
 }
 body.index .work .item .item__link:hover, body.index .work .item .item__link:focus {
-  border-color: var(--clr-on-surf-var);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 body.index .skills {
   padding-top: 32px;
@@ -573,15 +587,6 @@ body.index .contact {
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 @media only screen and (min-width: 896px) {
-  body.index .nav {
-    max-width: 896px;
-  }
-  body.index .nav__menu_list {
-    padding: 0 16px;
-  }
-  body.index .nav__menu_list .nav__link {
-    padding: 0 32px;
-  }
   body.index .main {
     display: flex;
     flex-wrap: wrap;
@@ -595,7 +600,7 @@ body.index .contact {
   }
   body.index .intro {
     width: 100%;
-    padding-top: 160px;
+    padding-top: 240px;
   }
   body.index .intro .name {
     font-size: 2.4rem;
@@ -637,6 +642,7 @@ body.index .contact {
   body.index .work .item .item__link {
     margin-top: 24px;
     justify-self: flex-start;
+    min-width: 160px;
   }
   body.index .skills {
     width: 50%;

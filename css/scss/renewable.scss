@@ -7,40 +7,42 @@
 ================================================*/
 
 .project.renewable {
-  .header {
-    overflow: hidden;
-    background: linear-gradient(to bottom, var(--clr-renew-pri) 50%, #004bc4);
-  }
+  // .header {
+  //   overflow: hidden;
+  //   background: linear-gradient(to bottom, var(--clr-renew-pri) 50%, #004bc4);
+  // }
 
-  .header_wrap {
-    position: relative;
-    padding-top: 300px;
-    padding-bottom: 48px;
+  // .header_wrap {
+  //   position: relative;
+  //   padding-top: 300px;
+  //   padding-bottom: 48px;
 
-    ::before {
-      position: absolute;
-      top: -120px;
-      left: 24px;
-      width: 540px;
-      height: 396px;
-      background-image: url(../images/renewable/hero_visual.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-      transform: rotate(20deg);
-    }
-  }
+  //   ::before {
+  //     position: absolute;
+  //     top: -120px;
+  //     left: 24px;
+  //     width: 540px;
+  //     height: 396px;
+  //     background-image: url(../images/renewable/hero_visual.png);
+  //     background-size: cover;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     content: "";
+  //     transform: rotate(20deg);
+  //   }
+  // }
 
-  .project__title {
-    color: var(--clr-renew-on-pri);
+  // .project__title {
+  //   color: var(--clr-renew-on-pri);
 
-    .highlight {
-      color: var(--clr-renew-on-pri-cnt);
-    }
-  }
+  //   .highlight {
+  //     color: var(--clr-renew-on-pri-cnt);
+  //   }
+  // }
 
   .overview {
+    padding-top: 136px;
+
     .item_list {
       display: flex;
       flex-direction: column;
@@ -256,7 +258,7 @@
   }
 
   .final_design {
-    padding-top: 32px;
+    // padding-top: 32px;
 
     .sec_wrap {
       gap: var(--gap-v-l);
@@ -324,18 +326,20 @@
 
 @media only screen and (min-width: 896px) {
   .project.renewable {
-    .header_wrap {
-      padding-top: 100px;
-      padding-bottom: 100px;
+    // .header_wrap {
+    //   padding-top: 100px;
+    //   padding-bottom: 100px;
 
-      ::before {
-        top: -80px;
-        left: auto;
-        right: -80px;
-      }
-    }
+    //   ::before {
+    //     top: -80px;
+    //     left: auto;
+    //     right: -80px;
+    //   }
+    // }
 
     .overview {
+      padding-top: 180px;
+
       .item_list {
         flex-direction: row;
         flex-wrap: wrap;

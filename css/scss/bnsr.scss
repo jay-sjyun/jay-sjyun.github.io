@@ -9,40 +9,42 @@
 ================================================*/
 
 .project.bnsr {
-  .header {
-    overflow: hidden;
-    background: linear-gradient(to bottom, var(--clr-bnsr-on-sec-cnt) 50%, #00322a);
-  }
+  // .header {
+  //   overflow: hidden;
+  //   background: linear-gradient(to bottom, var(--clr-bnsr-on-sec-cnt) 50%, #00322a);
+  // }
 
-  .header_wrap {
-    position: relative;
-    padding-top: 300px;
-    padding-bottom: 48px;
+  // .header_wrap {
+  //   position: relative;
+  //   padding-top: 300px;
+  //   padding-bottom: 48px;
 
-    ::before {
-      position: absolute;
-      top: -200px;
-      left: 50%;
-      width: 524px;
-      height: 559px;
-      background-image: url(../images/bnsr/hero_visual_mobile.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-      transform: translateX(-46%) rotate(-30deg);
-    }
-  }
+  //   ::before {
+  //     position: absolute;
+  //     top: -200px;
+  //     left: 50%;
+  //     width: 524px;
+  //     height: 559px;
+  //     background-image: url(../images/bnsr/hero_visual_mobile.png);
+  //     background-size: cover;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     content: "";
+  //     transform: translateX(-46%) rotate(-30deg);
+  //   }
+  // }
 
-  .project__title {
-    color: var(--clr-bnsr-on-sec);
+  // .project__title {
+  //   color: var(--clr-bnsr-on-sec);
 
-    .highlight {
-      color: var(--clr-bnsr-sec);
-    }
-  }
+  //   .highlight {
+  //     color: var(--clr-bnsr-sec);
+  //   }
+  // }
 
   .overview {
+    padding-top: 136px;
+
     .item_list {
       display: flex;
       flex-direction: column;
@@ -167,7 +169,7 @@
   }
 
   .final_design {
-    padding-top: 32px;
+    // padding-top: 32px;
 
     .sec_wrap {
       gap: var(--gap-v-l);
@@ -209,23 +211,25 @@
 
 @media only screen and (min-width: 896px) {
   .project.bnsr {
-    .header_wrap {
-      padding-top: 100px;
-      padding-bottom: 100px;
+    // .header_wrap {
+    //   padding-top: 100px;
+    //   padding-bottom: 100px;
 
-      ::before {
-        position: absolute;
-        top: 50%;
-        left: auto;
-        right: -20px;
-        width: 524px;
-        height: 449px;
-        background-image: url(../images/bnsr/hero_visual_desktop.png);
-        transform: translateY(-50%) translateX(0) rotate(-30deg);
-      }
-    }
+    //   ::before {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: auto;
+    //     right: -20px;
+    //     width: 524px;
+    //     height: 449px;
+    //     background-image: url(../images/bnsr/hero_visual_desktop.png);
+    //     transform: translateY(-50%) translateX(0) rotate(-30deg);
+    //   }
+    // }
 
     .overview {
+      padding-top: 180px;
+
       .item_list {
         flex-direction: row;
         flex-wrap: wrap;

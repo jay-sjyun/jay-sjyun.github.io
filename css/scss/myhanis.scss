@@ -7,40 +7,42 @@
 ================================================*/
 
 .project.myhanis {
-  .header {
-    overflow: hidden;
-    background-color: var(--clr-hanis-sec-cnt);
-  }
+  // .header {
+  //   overflow: hidden;
+  //   background-color: var(--clr-hanis-sec-cnt);
+  // }
 
-  .header_wrap {
-    position: relative;
-    padding-top: 64px;
-    padding-bottom: 300px;
+  // .header_wrap {
+  //   position: relative;
+  //   padding-top: 64px;
+  //   padding-bottom: 300px;
 
-    ::before {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 280px;
-      height: 280px;
-      background-image: url(../images/myhanis/hero_visual.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-      transform: translateX(-50%);
-    }
-  }
+  //   ::before {
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 50%;
+  //     width: 280px;
+  //     height: 280px;
+  //     background-image: url(../images/myhanis/hero_visual.png);
+  //     background-size: cover;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     content: "";
+  //     transform: translateX(-50%);
+  //   }
+  // }
 
-  .project__title {
-    color: var(--clr-hanis-sec);
+  // .project__title {
+  //   color: var(--clr-hanis-sec);
 
-    .highlight {
-      color: var(--clr-hanis-pri);
-    }
-  }
+  //   .highlight {
+  //     color: var(--clr-hanis-pri);
+  //   }
+  // }
 
   .overview {
+    padding-top: 136px;
+
     .item_list {
       display: flex;
       flex-direction: column;
@@ -433,21 +435,23 @@
 
 @media only screen and (min-width: 896px) {
   .project.myhanis {
-    .header_wrap {
-      padding-top: 100px;
-      padding-bottom: 100px;
+    // .header_wrap {
+    //   padding-top: 100px;
+    //   padding-bottom: 100px;
 
-      ::before {
-        bottom: -24px;
-        left: auto;
-        right: 72px;
-        width: 320px;
-        height: 320px;
-        transform: translateX(0);
-      }
-    }
+    //   ::before {
+    //     bottom: -24px;
+    //     left: auto;
+    //     right: 72px;
+    //     width: 320px;
+    //     height: 320px;
+    //     transform: translateX(0);
+    //   }
+    // }
 
     .overview {
+      padding-top: 180px;
+
       .item_list {
         flex-direction: row;
         flex-wrap: wrap;

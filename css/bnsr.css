@@ -61,23 +61,88 @@ body {
 }
 
 .header {
-  padding-left: 16px;
-  padding-right: 16px;
+  display: inline-block;
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  z-index: 100;
+  max-width: calc(100% - 32px);
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 45, 122, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(255, 255, 255, 0.1), inset 0 0 20px 10px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent, rgba(255, 255, 255, 0.1));
 }
 @media only screen and (min-width: 896px) {
   .header {
-    padding-left: 48px;
-    padding-right: 48px;
+    top: 24px;
+    max-width: calc(100% - 96px);
   }
 }
 
-.header_wrap {
-  max-width: 480px;
-  margin: 0 auto;
+.nav {
+  padding: 8px;
+}
+
+.nav__menu_list {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.nav__menu_list::-webkit-scrollbar {
+  display: none;
+}
+.nav__menu_list .nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 100px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--clr-on-surf);
 }
 @media only screen and (min-width: 896px) {
-  .header_wrap {
-    max-width: 800px;
+  .nav__menu_list .nav__link {
+    font-size: 1.6rem;
+  }
+}
+.nav__menu_list .nav__link {
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+.nav__menu_list .nav__link:hover, .nav__menu_list .nav__link:focus {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+@media only screen and (min-width: 896px) {
+  .nav__menu_list .nav__link {
+    padding: 0 24px;
   }
 }
 
@@ -348,33 +413,8 @@ body {
   모바일 Mobile
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
-.project.bnsr .header {
-  overflow: hidden;
-  background: linear-gradient(to bottom, var(--clr-bnsr-on-sec-cnt) 50%, #00322a);
-}
-.project.bnsr .header_wrap {
-  position: relative;
-  padding-top: 300px;
-  padding-bottom: 48px;
-}
-.project.bnsr .header_wrap ::before {
-  position: absolute;
-  top: -200px;
-  left: 50%;
-  width: 524px;
-  height: 559px;
-  background-image: url(../images/bnsr/hero_visual_mobile.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  content: "";
-  transform: translateX(-46%) rotate(-30deg);
-}
-.project.bnsr .project__title {
-  color: var(--clr-bnsr-on-sec);
-}
-.project.bnsr .project__title .highlight {
-  color: var(--clr-bnsr-sec);
+.project.bnsr .overview {
+  padding-top: 136px;
 }
 .project.bnsr .overview .item_list {
   display: flex;
@@ -543,9 +583,6 @@ body {
   align-self: flex-start;
   width: calc(50% - 8px);
 }
-.project.bnsr .final_design {
-  padding-top: 32px;
-}
 .project.bnsr .final_design .sec_wrap {
   gap: var(--gap-v-l);
 }
@@ -573,19 +610,8 @@ body {
 |||||||||||||||||||||||||||||||||||||||||||||||||
 ================================================*/
 @media only screen and (min-width: 896px) {
-  .project.bnsr .header_wrap {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  .project.bnsr .header_wrap ::before {
-    position: absolute;
-    top: 50%;
-    left: auto;
-    right: -20px;
-    width: 524px;
-    height: 449px;
-    background-image: url(../images/bnsr/hero_visual_desktop.png);
-    transform: translateY(-50%) translateX(0) rotate(-30deg);
+  .project.bnsr .overview {
+    padding-top: 180px;
   }
   .project.bnsr .overview .item_list {
     flex-direction: row;
