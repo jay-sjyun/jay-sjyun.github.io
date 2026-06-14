@@ -2,7 +2,7 @@ const swiperAuto = new Swiper(".swiper_auto", {
   loop: true,
 
   autoplay: {
-    delay: 2000,
+    delay: 1500,
   },
 
   // Navigation arrows
